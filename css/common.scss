@@ -69,7 +69,9 @@ header {
 .search {
   position: absolute;
   width: 700px;
-  border: 1px solid $white_gray;
+  height: 25px;
+  border: 1px solid $border_gray;
+  top: 50%;
   left: 50%;
-  margin-left: -350px;
+  margin: -13px 0 0 -350px;
 }
