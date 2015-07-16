@@ -54,6 +54,9 @@ input {
 			-webkit-appearance: none; // Safari 8+
 		}
 	}
+	&:focus {
+		outline: none;
+	}
 }
 
 main {

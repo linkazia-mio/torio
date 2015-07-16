@@ -29,6 +29,10 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+input:focus {
+  outline: none;
+}
+
 main {
   display: block;
 }

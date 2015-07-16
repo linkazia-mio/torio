@@ -25,6 +25,34 @@ $torio_green: #50bcb6;
 $torio_red: #ed6d44;
 $torio_yellow: #feb22e;
 
+$img_path: "../images/";
+
+/*角丸*/
+@mixin border_radius($value: 4px) {
+    -webkit-border-radius: $value;
+       -moz-border-radius: $value;
+        -ms-border-radius: $value;
+            border-radius: $value;
+}
+/*透明度*/
+@mixin opacity($opacity) {
+     opacity: $opacity;
+     $opacityIE: $opacity * 100;
+     filter: alpha(opacity=$opacityIE);
+}
+/*Retina　対応*/
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
 html {
   font-family: "Helvetica Neue",Helvetica,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
 }
@@ -37,11 +65,22 @@ header {
   border-bottom: 1px solid $border_gray;
   position: relative;
   .global_menu {
-    color: $brack;
+    @include opacity(0.7);
     position: absolute;
+    width: 15px;
+    height: 0;
+    padding-top: 10px;
     left: 20px;
     top: 50%;
-    margin-top: -8px;
+    margin-top: -5px;
+    background: url('#{$img_path}icon_global_menu.png') no-repeat center;
+    @include image-2x("#{$img_path}icon_global_menu@2x.png", 15px, 10px);
+    overflow: hidden;
+    display: block;
+    &:hover {
+      @include opacity(1.0);
+      cursor: pointer;
+    }
   }
 }
 .header_line {
@@ -67,11 +106,30 @@ header {
 }
 /*Search*/
 .search {
+  @include border_radius();
   position: absolute;
-  width: 700px;
-  height: 25px;
+  width: 70%;
+  height: 32px;
   border: 1px solid $border_gray;
   top: 50%;
   left: 50%;
-  margin: -13px 0 0 -350px;
+  margin: -16px 0 0 -35%;
+  input {
+    &[type="search"] {
+      width: 90%;
+      height: 32px;
+      padding: 0 10px;
+      line-height: 32px;
+    }
+    &[type="submit"] {
+      position: absolute;
+      right: 0;
+      width: 32px;
+      background: url('#{$img_path}icon_header_search.png') no-repeat center;
+      @include image-2x("#{$img_path}icon_header_search@2x.png", 15px, 15px);
+      height: 0;
+      padding-top: 32px;
+      overflow: hidden;
+    }
+  }
 }
