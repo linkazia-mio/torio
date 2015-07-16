@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*TORIO Color*/
+/*TORIO Service Color*/
+html {
+  font-family: "Helvetica Neue",Helvetica,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+}
+
+pre {
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+}
+
+/*Header*/
+header {
+  height: 52px;
+  border-bottom: 1px solid #e2e2e2;
+  position: relative;
+}
+
+header .global_menu {
+  color: #555555;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -8px;
+}
+
+.header_line {
+  width: 100%;
+  position: relative;
+  background: #ed6d44;
+  height: 2px;
+  width: 100%;
+}
+
+.header_line:before {
+  content: '';
+  position: absolute;
+  border-top: 2px solid #feb22e;
+  width: 33%;
+  left: 0;
+}
+
+.header_line:after {
+  content: '';
+  position: absolute;
+  border-top: 2px solid #50bcb6;
+  width: 33%;
+  right: 0;
+}
+
+/*Search*/
+.search {
+  position: absolute;
+  width: 700px;
+  border: 1px solid #f5f5f5;
+  left: 50%;
+  margin-left: -350px;
+}
+
+/*# sourceMappingURL=common.css.map */
