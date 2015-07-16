@@ -40,6 +40,12 @@ $img_path: "../images/";
      $opacityIE: $opacity * 100;
      filter: alpha(opacity=$opacityIE);
 }
+@mixin easeout {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
 /*Retina　対応*/
 @mixin image-2x($image, $width, $height) {
   @media (min--moz-device-pixel-ratio: 1.3),
@@ -66,6 +72,7 @@ header {
   position: relative;
   .global_menu {
     @include opacity(0.7);
+    @include easeout;
     position: absolute;
     width: 15px;
     height: 0;
@@ -83,6 +90,7 @@ header {
     }
   }
 }
+/*Torio Line*/
 .header_line {
   width: 100%;
   position: relative;
@@ -108,28 +116,85 @@ header {
 .search {
   @include border_radius();
   position: absolute;
-  width: 70%;
+  width: 60%;
   height: 32px;
   border: 1px solid $border_gray;
   top: 50%;
   left: 50%;
-  margin: -16px 0 0 -35%;
+  margin: -16px 0 0 -30%;
   input {
     &[type="search"] {
-      width: 90%;
+      width: 100%;
       height: 32px;
       padding: 0 10px;
       line-height: 32px;
     }
     &[type="submit"] {
       position: absolute;
-      right: 0;
+      right: 1px;
       width: 32px;
-      background: url('#{$img_path}icon_header_search.png') no-repeat center;
+      background: url('#{$img_path}icon_header_search.png') #fff no-repeat center;
       @include image-2x("#{$img_path}icon_header_search@2x.png", 15px, 15px);
       height: 0;
-      padding-top: 32px;
+      padding-top: 30px;
       overflow: hidden;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+/*Alart*/
+.alart {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -15px;
+  a {
+    @include opacity(0.7);
+    @include easeout;
+    display: block;
+    &:hover {
+      @include opacity(1.0);
+    }
+  }
+  .task {
+    display: inline-block;
+    a {
+      .icon {
+        height: 0;
+        width: 15px;
+        padding-top: 30px;
+        overflow: hidden;
+        background: url('#{$img_path}icon_task.png') #fff no-repeat center;
+        @include image-2x("#{$img_path}icon_task@2x.png", 15px, 15px);
+      }
+    }
+  }
+  .activity {
+    display: inline-block;
+    margin-left: 10%;
+    a {
+      .icon {
+        height: 0;
+        width: 15px;
+        padding-top: 30px;
+        overflow: hidden;
+        background: url('#{$img_path}icon_activity.png') #fff no-repeat center;
+        @include image-2x("#{$img_path}icon_activity@2x.png", 13px, 15px);
+      }
+    }
+  }
+  .account {
+    display: inline-block;
+    margin-left: 10%;
+    .image {
+      img {
+        @include border_radius(15px);
+        width: 30px;
+        height: auto;
+        vertical-align: bottom;
+      }
     }
   }
 }
