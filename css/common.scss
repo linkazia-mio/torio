@@ -226,19 +226,52 @@ header {
 /*Global Menu*/
 .global_menu {
   display: table-cell;
-  width: 15%;
+  width: 20%;
   height: 100%;
-  padding: 20px;
+  padding: 10px 20px;
   border-right: 1px solid $border_gray;
   h3 {
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
+  }
+  ul {
+    margin-bottom: 50px;
+    @include fontsize(1.2);
+    li {
+      list-style: none;
+      clear: both;
+      margin-bottom: 24px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      a {
+        color: $brack;
+      }
+      .global_list_noimage {
+        @include border_radius();
+        display: block;
+        float: left;
+        background: $green;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+      .global_list_image {
+        float: left;
+        img {
+          @include border_radius();
+          width: 20px;
+          height: auto;
+          margin-right: 8px;
+        }
+      }
+    }
   }
 }
 /*Page Menu*/
 .page_menu {
   display: table-cell;
   padding: 10px;
-  width: 20%;
+  width: 30%;
   height: 100%;
   border-right: 1px solid $border_gray;
 }
