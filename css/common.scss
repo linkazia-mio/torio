@@ -34,12 +34,22 @@ $img_path: "../images/";
         -ms-border-radius: $value;
             border-radius: $value;
 }
+@mixin filter($value: 100%) {
+  -webkit-filter: saturate($value);
+  filter:saturate($value);
+}
+/*Font size*/
+@mixin fontsize($fontsize) {
+     font-size: $fontsize * 10px;
+     font-size: $fontsize+rem;
+}
 /*透明度*/
 @mixin opacity($opacity) {
      opacity: $opacity;
      $opacityIE: $opacity * 100;
      filter: alpha(opacity=$opacityIE);
 }
+/*透明度*/
 @mixin easeout {
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
@@ -61,6 +71,7 @@ $img_path: "../images/";
 
 html {
   font-family: "Helvetica Neue",Helvetica,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  color: $brack;
 }
 pre {
   font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
@@ -70,9 +81,8 @@ header {
   height: 52px;
   border-bottom: 1px solid $border_gray;
   position: relative;
-  .global_menu {
-    @include opacity(0.7);
-    @include easeout;
+  .global_menu_btn {
+    @include filter(0);
     position: absolute;
     width: 15px;
     height: 0;
@@ -85,7 +95,7 @@ header {
     overflow: hidden;
     display: block;
     &:hover {
-      @include opacity(1.0);
+      @include filter();
       cursor: pointer;
     }
   }
@@ -149,13 +159,17 @@ header {
   position: absolute;
   top: 50%;
   right: 20px;
+  width: 130px;
+  height: 30px;
   margin-top: -15px;
   a {
-    @include opacity(0.7);
+    -webkit-filter: saturate(0%);
+    filter: saturate(0%);
     @include easeout;
     display: block;
     &:hover {
-      @include opacity(1.0);
+      -webkit-filter: saturate(100%);
+      filter:saturate(100%);
     }
   }
   .task {
@@ -173,7 +187,7 @@ header {
   }
   .activity {
     display: inline-block;
-    margin-left: 10%;
+    margin-left: 25%;
     a {
       .icon {
         height: 0;
@@ -186,8 +200,9 @@ header {
     }
   }
   .account {
-    display: inline-block;
-    margin-left: 10%;
+    position: absolute;
+    top: 0;
+    right: 0;
     .image {
       img {
         @include border_radius(15px);
@@ -197,4 +212,41 @@ header {
       }
     }
   }
+}
+/*Main*/
+.main {
+  width: 100%;
+  height: 100%;
+  display: table;
+  table-layout: fixed;
+  h3 {
+    @include fontsize(1.2);
+  }
+}
+/*Global Menu*/
+.global_menu {
+  display: table-cell;
+  width: 15%;
+  height: 100%;
+  padding: 20px;
+  border-right: 1px solid $border_gray;
+  h3 {
+    margin-bottom: 24px;
+  }
+}
+/*Page Menu*/
+.page_menu {
+  display: table-cell;
+  padding: 10px;
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid $border_gray;
+}
+/*detail*/
+.detail {
+  display: table-cell;
+  padding: 30px;
+  background: $dark_gray;
+  width: 100%;
+  height: 100%;
 }

@@ -107,7 +107,7 @@ textarea {
 :root {
   box-sizing: border-box;
   cursor: default;
-  font: 16px/1.5 sans-serif;
+  font: 62.5%/1.5 sans-serif;
   text-rendering: optimizeLegibility;
 }
 

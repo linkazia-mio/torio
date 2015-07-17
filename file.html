@@ -2,15 +2,21 @@
   <head>
     <meta charset="utf-8">
     <title>TORIO</title>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/function.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui.theme.min.css">
     <link rel="stylesheet" href="css/sanitize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/common.css">
   </head>
   <body>
+    <!--Header/-->
     <header>
       <div class="header_line">
       </div>
-       <a class="global_menu">Global menu</a>
+       <p class="global_menu_btn">Global menu</p>
        <div class="search">
          <form method="post">
            <input type="search"><input type="submit" value="送信する">
@@ -31,5 +37,33 @@
          </div>
        </div>
     </header>
+    <!--/Header-->
+    <!--Main/-->
+    <div class="main">
+      <div class="global_menu" class="ui-widget-content">
+        <h3>お気に入り</h3>
+        <ul>
+          <li><a href="">星乃リゾート</a></li>
+          <li><a href="">星乃リゾート</a></li>
+          <li><a href="">星乃リゾート</a></li>
+          <li><a href="">星乃リゾート</a></li>
+        </ul>
+        <h3>グループ</h3>
+        <ul>
+          <li><a href="">星乃リゾート</a></li>
+          <li><a href="">星乃リゾート</a></li>
+          <li><a href="">星乃リゾート</a></li>
+          <li><a href="">星乃リゾート</a></li>
+        </ul>
+      </div>
+      <div class="page_menu" class="ui-widget-content">
+        <p>このボックスは、サイズを変更できる。</p>
+      </div>
+      <div class="detail" class="ui-widget-content">
+        <p>このボックスは、サイズを変更できる。</p>
+      </div>
+    </div>
+    <!--/Main-->
   </body>
+
 </html>
