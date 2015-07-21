@@ -2,10 +2,12 @@
 window.onload=function(){
   jQuery(function() {
       jQuery( '.global_menu' ).resizable({
-          minWidth: 150
+          minWidth: 100,
+          maxWidth: 400
       });
       jQuery( '.page_menu' ).resizable({
-          minWidth: 150
+          minWidth: 150,
+          maxWidth: 600
       });
       jQuery( '.main' ).resizable({
       });

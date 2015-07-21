@@ -1,0 +1,381 @@
+/*TORIO Color*/
+$green: #43aea8;
+$link_green: #50bcb6;
+$white_green: #e0f2f2;
+$dark_green: #339999;
+$red: #ed6d44;
+$white_red: #ffebe7;
+$dark_red: #db4c3f;
+$yellow: #feb22e;
+$white_yellow: #f9f0e1;
+$dark_yellow: #ff9933;
+$border_gray: #e2e2e2;
+$border_white_gray: #f5f5f5;
+$dark_gray: #e9e9e9;
+$white_gray: #f5f5f5;
+$icon_white_gray: #aeaeae;
+$icon_dark_gray: #7f7f7f;
+$icon_green: #50bcb6;
+$dark_brack: #333333;
+$brack: #555555;
+$white_brack: #999999;
+
+/*TORIO Service Color*/
+$torio_green: #50bcb6;
+$torio_red: #ed6d44;
+$torio_yellow: #feb22e;
+
+$img_path: "../images/";
+
+/*角丸*/
+@mixin border_radius($value: 4px) {
+    -webkit-border-radius: $value;
+       -moz-border-radius: $value;
+        -ms-border-radius: $value;
+            border-radius: $value;
+}
+@mixin filter($value: 100%) {
+  -webkit-filter: saturate($value);
+  filter:saturate($value);
+}
+/*Font size*/
+@mixin fontsize($fontsize) {
+     font-size: $fontsize * 10px;
+     font-size: $fontsize+rem;
+}
+/*透明度*/
+@mixin opacity($opacity) {
+     opacity: $opacity;
+     $opacityIE: $opacity * 100;
+     filter: alpha(opacity=$opacityIE);
+}
+/*透明度*/
+@mixin easeout {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+/*Retina　対応*/
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+html {
+  font-family: "Helvetica Neue",Helvetica,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  color: $brack;
+  height: 100%;
+}
+pre {
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+}
+/*Header*/
+header {
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid $border_gray;
+  width: 100%;
+  .header_inner {
+    height: 52px;
+    background: #fff;
+    position: relative;
+  }
+  .global_menu_btn {
+    @include filter(0);
+    position: absolute;
+    width: 15px;
+    height: 0;
+    padding-top: 10px;
+    left: 20px;
+    top: 50%;
+    margin-top: -5px;
+    background: url('#{$img_path}icon_global_menu.png') no-repeat center;
+    @include image-2x("#{$img_path}icon_global_menu@2x.png", 15px, 10px);
+    overflow: hidden;
+    display: block;
+    &:hover {
+      @include filter();
+      cursor: pointer;
+    }
+  }
+}
+/*Torio Line*/
+.header_line {
+  position: relative;
+  background: $torio_red;
+  height: 2px;
+  width: 100%;
+  &:before {
+    content: '';
+    position: absolute;
+    border-top: 2px solid $torio_yellow;
+    width: 33%;
+    left: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    border-top: 2px solid $torio_green;
+    width: 33%;
+    right: 0;
+  }
+}
+/*Search*/
+.search {
+  @include border_radius();
+  position: absolute;
+  width: 60%;
+  height: 32px;
+  border: 1px solid $border_gray;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -30%;
+  input {
+    &[type="search"] {
+      width: 100%;
+      height: 32px;
+      padding: 0 10px;
+      line-height: 32px;
+    }
+    &[type="submit"] {
+      position: absolute;
+      right: 1px;
+      width: 32px;
+      background: url('#{$img_path}icon_header_search.png') #fff no-repeat center;
+      @include image-2x("#{$img_path}icon_header_search@2x.png", 15px, 15px);
+      height: 0;
+      padding-top: 30px;
+      overflow: hidden;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+/*Alart*/
+.alart {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 130px;
+  height: 30px;
+  margin-top: -15px;
+  a {
+    -webkit-filter: saturate(0%);
+    filter: saturate(0%);
+    @include easeout;
+    display: block;
+    &:hover {
+      -webkit-filter: saturate(100%);
+      filter:saturate(100%);
+    }
+  }
+  .task {
+    display: inline-block;
+    a {
+      .icon {
+        height: 0;
+        width: 15px;
+        padding-top: 30px;
+        overflow: hidden;
+        background: url('#{$img_path}icon_task.png') #fff no-repeat center;
+        @include image-2x("#{$img_path}icon_task@2x.png", 15px, 15px);
+      }
+    }
+  }
+  .activity {
+    display: inline-block;
+    margin-left: 25%;
+    a {
+      .icon {
+        height: 0;
+        width: 15px;
+        padding-top: 30px;
+        overflow: hidden;
+        background: url('#{$img_path}icon_activity.png') #fff no-repeat center;
+        @include image-2x("#{$img_path}icon_activity@2x.png", 13px, 15px);
+      }
+    }
+  }
+  .account {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .image {
+      img {
+        @include border_radius(15px);
+        width: 30px;
+        height: auto;
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+/*Main*/
+.main {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 52px;
+  display: table;
+  table-layout: fixed;
+  h3 {
+    @include fontsize(1.2);
+  }
+}
+/*Global Menu*/
+.global_menu {
+  display: table-cell;
+  width: 20%;
+  min-width: 100px;
+  height: 100%;
+  padding: 10px 0;
+  border-right: 1px solid $border_gray;
+  h3 {
+    margin: 0 20px 16px 20px;
+  }
+  ul {
+    margin: 0 0 41px -10px;
+    @include fontsize(1.2);
+    li {
+      position: relative;
+      list-style: none;
+      clear: both;
+      margin-bottom: 0;
+      a {
+        color: $brack;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        span {
+          margin: 9px 8px 9px 12px;
+        }
+        &.unread {
+          color: $green;
+          font-weight: bold;
+          &:before {
+            @include border_radius(3px);
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            margin-top: -3px;
+            z-index: 1000;
+            content: "";
+            width: 5px;
+            height: 5px;
+            background: $torio_green;
+          }
+        }
+        height: 38px;
+        line-height: 38px;
+        &.selected {
+          background: $torio_green;
+          color: #fff;
+          .global_list_noimage {
+            background: #fff;
+          }
+        }
+      }
+      .global_list_noimage {
+        @include border_radius();
+        display: block;
+        float: left;
+        background: $torio_green;
+        width: 20px;
+        height: 20px;
+        margin-left: 31px;
+      }
+      .global_list_image {
+        float: left;
+        margin-left: 31px;
+        img {
+          @include border_radius();
+          width: 20px;
+          height: auto;
+        }
+      }
+    }
+  }
+  .groups {
+    position: relative;
+    .add {
+      position: absolute;
+      right: 17px;
+      top : 1px;
+      button  {
+        &:hover {
+          cursor: pointer;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      .md-trigger {
+        width: 12px;
+        span {
+          position: relative;
+          display:block;
+          width:3px;
+          height: 13px;
+          min-height: 1;
+          background: $icon_white_gray;
+          &:before {
+            content:"";
+            display:block;
+            width:100%;
+            height:100%;
+            -moz-transform:rotate(90deg);
+            -webkit-transform:rotate(90deg);
+            background: $icon_white_gray;
+          }
+        }
+      }
+    }
+  }
+  .member {
+    @extend .groups;
+    .global_list_noimage {
+      @include border_radius(10px);
+      @include fontsize(1.0);
+      line-height: 18px;
+      background: white;
+      border: 1px solid $torio_green;
+      text-align: center;
+      color: $torio_green;
+    }
+    .global_list_image {
+      float: left;
+      img {
+        @include border_radius(10px);
+        width: 20px;
+        height: auto;
+      }
+    }
+  }
+}
+/*Page Menu*/
+.page_menu {
+  display: table-cell;
+  padding: 10px;
+  width: 30%;
+  height: 100%;
+  border-right: 1px solid $border_gray;
+}
+/*detail*/
+.detail {
+  display: table-cell;
+  padding: 30px;
+  background: $dark_gray;
+  width: 100%;
+  height: 100%;
+}
