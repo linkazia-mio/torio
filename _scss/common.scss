@@ -26,7 +26,10 @@ $torio_red: #ed6d44;
 $torio_yellow: #feb22e;
 
 $img_path: "../images/";
-
+@font-face {
+  font-family: torio_icon;
+  src: url(../font/torio_icon.ttf) format("ttf");
+}
 /*角丸*/
 @mixin border_radius($value: 4px) {
     -webkit-border-radius: $value;
@@ -70,6 +73,7 @@ $img_path: "../images/";
 }
 
 html {
+  overflow: hidden;
 }
 body {
   font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
@@ -93,6 +97,11 @@ pre {
 ul {
   li {
     list-style: none;
+  }
+}
+.icon {
+  @font-face {
+    font-family: icon;
   }
 }
 /*Header*/
@@ -225,13 +234,10 @@ header {
     display: inline-block;
     margin-left: 25%;
     p {
+      @include fontsize(1.8);
       &.icon {
-        height: 0;
+        height: 30px;
         width: 15px;
-        padding-top: 30px;
-        overflow: hidden;
-        background: url('#{$img_path}icon_activity.png') #fff no-repeat center;
-        @include image-2x("#{$img_path}icon_activity@2x.png", 13px, 15px);
       }
     }
   }

@@ -36,11 +36,11 @@ gulp.task('iconfont', function(){
       });
 
     // CSS templating, e.g.
-      gulp.src('template/icon.css')
+      gulp.src('css/icon.css')
         .pipe(consolidate('mustache', {
           glyphs: codepoints,
-          fontName: 'icon',
-          fontPath: '../fonts/',
+          fontName: 'torio_icon',
+          fontPath: 'fonts/',
           timeStamp: Date.now()
       }))
       .pipe(gulp.dest('css/'))

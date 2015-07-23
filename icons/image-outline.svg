@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>image-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="drive-image-copy" sketch:type="MSLayerGroup" transform="translate(5.000000, 7.000000)">
+            <path d="M19.9304438,1.77777778 C19.9304438,0.8 18.9339216,0 17.71595,0 L2.21449375,0 C0.996522188,0 0,0.8 0,1.77777778 L0,14.2222222 C0,15.2 0.996522188,16 2.21449375,16 L17.71595,16 C18.9339216,16 19.9304438,15.2 19.9304438,14.2222222 L19.9304438,1.77777778 Z M0,12.5 L5.61986449,6.45770264 C6.07179477,5.97180176 6.97565531,5 6.97565531,5 M16.693705,15.8014152 C16.693705,15.8014152 10.9642898,10.2581873 8.09958217,7.4865734 C7.40847222,6.81792227 6.02625232,5.48062001 6.02625232,5.48062001 M11.9582663,11 L15.1696174,7.77744141 C15.4278633,7.51829427 15.944355,7 15.944355,7 M20.0086748,11.9906981 C20.0086748,11.9906981 17.2858723,9.54940804 15.9244711,8.32876298 C15.5960334,8.03428269 14.939158,7.4453221 14.939158,7.4453221" id="Shape" stroke="#000000" stroke-width="2" sketch:type="MSShapeGroup"></path>
+            <ellipse id="Oval" fill="#000000" sketch:type="MSShapeGroup" cx="11.4947833" cy="4.5" rx="1.49478328" ry="1.5"></ellipse>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-drop-sort</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="arrow-drop-down-copy-3" sketch:type="MSLayerGroup" transform="translate(10.000000, 17.500000)" fill="#000000">
+            <path d="M0,0 L5,5 L10,0 L0,0 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+        <g id="arrow-drop-up-copy" sketch:type="MSLayerGroup" transform="translate(10.000000, 8.500000)" fill="#000000">
+            <path d="M0,5 L5,0 L10,5 L0,5 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

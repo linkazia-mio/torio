@@ -1,11 +1,18 @@
 @charset "UTF-8";
 /*TORIO Color*/
 /*TORIO Service Color*/
+@font-face {
+  font-family: torio_icon;
+  src: url(../font/torio_icon.ttf) format("ttf"); }
+
 /*角丸*/
 /*Font size*/
 /*透明度*/
 /*透明度*/
 /*Retina　対応*/
+html {
+  overflow: hidden; }
+
 body {
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
   color: #555555;
@@ -27,6 +34,10 @@ pre {
 
 ul li {
   list-style: none; }
+
+@font-face {
+  .icon {
+    font-family: icon; } }
 
 /*Header*/
 header {
@@ -164,17 +175,12 @@ header {
   .alart .activity {
     display: inline-block;
     margin-left: 25%; }
-    .alart .activity p.icon {
-      height: 0;
-      width: 15px;
-      padding-top: 30px;
-      overflow: hidden;
-      background: url("../images/icon_activity.png") #fff no-repeat center; }
-      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-        .alart .activity p.icon {
-          /* on retina, use image that's scaled by 2 */
-          background-image: url("../images/icon_activity@2x.png");
-          background-size: 13px 15px; } }
+    .alart .activity p {
+      font-size: 18px;
+      font-size: 1.8rem; }
+      .alart .activity p.icon {
+        height: 30px;
+        width: 15px; }
   .alart .account {
     position: absolute;
     top: 0;

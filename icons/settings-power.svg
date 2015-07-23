@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>settings-power</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="settings-power" sketch:type="MSLayerGroup" transform="translate(6.000000, 5.000000)" fill="#000000">
+            <path d="M10.6875,0 L8.3125,0 L8.3125,11.7647059 L10.6875,11.7647059 L10.6875,0 L10.6875,0 Z M14.9625,2.82352941 L13.3,4.47058824 C15.2,5.76470588 16.625,8 16.625,10.5882353 C16.625,14.4705882 13.41875,17.6470588 9.5,17.6470588 C5.58125,17.6470588 2.375,14.4705882 2.375,10.5882353 C2.375,8 3.8,5.76470588 5.81875,4.58823529 L4.0375,2.82352941 C1.6625,4.58823529 0,7.41176471 0,10.5882353 C0,15.7647059 4.275,20 9.5,20 C14.725,20 19,15.7647059 19,10.5882353 C19,7.41176471 17.3375,4.58823529 14.9625,2.82352941 L14.9625,2.82352941 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

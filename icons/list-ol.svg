@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>list-ol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="list-copy" sketch:type="MSLayerGroup" transform="translate(10.000000, 9.000000)" fill="#000000">
+            <path d="M0,7 L14,7 L14,5 L0,5 L0,7 L0,7 Z M0,12 L14,12 L14,10 L0,10 L0,12 L0,12 Z M0,0 L0,2 L14,2 L14,0 L0,0 L0,0 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+        <text id="1" sketch:type="MSTextLayer" font-family="Charter" font-size="5" font-weight="686" fill="#000000">
+            <tspan x="6" y="12">1</tspan>
+        </text>
+        <text id="2" sketch:type="MSTextLayer" font-family="Charter" font-size="5" font-weight="686" fill="#000000">
+            <tspan x="6" y="17">2</tspan>
+        </text>
+        <text id="3" sketch:type="MSTextLayer" font-family="Charter" font-size="5" font-weight="686" fill="#000000">
+            <tspan x="6" y="22">3</tspan>
+        </text>
+    </g>
+</svg>
