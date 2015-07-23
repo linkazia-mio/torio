@@ -382,6 +382,7 @@ header {
 }
 /*Page Menu*/
 .page_menu {
+  position: relative;
   width: 20%;
   height: 100%;
   background: #fff;
@@ -402,6 +403,7 @@ header {
     }
   }
   .page_menu_inner {
+    overflow: hidden;
     .item {
       @include fontsize(1.2);
       position: relative;
@@ -413,6 +415,22 @@ header {
         color: $brack;
         font-weight: bold;
         margin-bottom: 14px;
+      }
+      &.file {
+        ul {
+          li {
+            @include border_radius();
+            display: inline-block;
+            height: 45px;
+            overflow: hidden;
+            border: 2px solid #fff;
+            box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+            img {
+              width: 60px;
+              height: auto;
+            }
+          }
+        }
       }
       &.note {
         height: 115px;
@@ -483,6 +501,11 @@ header {
         }
       }
     }
+  }
+  .page_menu_footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
   }
 }
 /*detail*/

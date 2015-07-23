@@ -306,6 +306,7 @@ header {
 
 /*Page Menu*/
 .page_menu {
+  position: relative;
   width: 20%;
   height: 100%;
   background: #fff; }
@@ -323,58 +324,77 @@ header {
       color: #555555;
       font-weight: bold;
       float: left; }
-  .page_menu .page_menu_inner .item {
-    font-size: 12px;
-    font-size: 1.2rem;
-    position: relative;
-    padding: 20px;
-    color: #555555;
-    border-bottom: 1px solid #e2e2e2; }
-    .page_menu .page_menu_inner .item .title {
-      font-size: 14px;
-      font-size: 1.4rem;
+  .page_menu .page_menu_inner {
+    overflow: hidden; }
+    .page_menu .page_menu_inner .item {
+      font-size: 12px;
+      font-size: 1.2rem;
+      position: relative;
+      padding: 20px;
       color: #555555;
-      font-weight: bold;
-      margin-bottom: 14px; }
-    .page_menu .page_menu_inner .item.note {
-      height: 115px;
-      overflow: hidden; }
-    .page_menu .page_menu_inner .item.task ul {
-      margin-right: 60px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis; }
-      .page_menu .page_menu_inner .item.task ul li {
-        margin-bottom: 5px; }
-        .page_menu .page_menu_inner .item.task ul li .name {
-          float: left;
-          display: block;
-          text-align: left; }
-        .page_menu .page_menu_inner .item.task ul li .value {
-          display: block;
-          text-align: right; }
-    .page_menu .page_menu_inner .item.task .graph {
-      position: absolute;
-      right: 13px;
-      bottom: 20px;
-      height: 50px; }
-      .page_menu .page_menu_inner .item.task .graph.green .number p {
-        color: #43aea8; }
-      .page_menu .page_menu_inner .item.task .graph.yellow .number p {
-        color: #feb22e; }
-      .page_menu .page_menu_inner .item.task .graph.red .number p {
-        color: #ed6d44; }
-      .page_menu .page_menu_inner .item.task .graph .number {
+      border-bottom: 1px solid #e2e2e2; }
+      .page_menu .page_menu_inner .item .title {
+        font-size: 14px;
+        font-size: 1.4rem;
+        color: #555555;
+        font-weight: bold;
+        margin-bottom: 14px; }
+      .page_menu .page_menu_inner .item.file ul li {
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        display: inline-block;
+        height: 45px;
+        overflow: hidden;
+        border: 2px solid #fff;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+        .page_menu .page_menu_inner .item.file ul li img {
+          width: 60px;
+          height: auto; }
+      .page_menu .page_menu_inner .item.note {
+        height: 115px;
+        overflow: hidden; }
+      .page_menu .page_menu_inner .item.task ul {
+        margin-right: 60px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+        .page_menu .page_menu_inner .item.task ul li {
+          margin-bottom: 5px; }
+          .page_menu .page_menu_inner .item.task ul li .name {
+            float: left;
+            display: block;
+            text-align: left; }
+          .page_menu .page_menu_inner .item.task ul li .value {
+            display: block;
+            text-align: right; }
+      .page_menu .page_menu_inner .item.task .graph {
         position: absolute;
-        right: 0;
-        top: 0;
-        width: 50px;
-        text-align: center;
-        line-height: 50px; }
-        .page_menu .page_menu_inner .item.task .graph .number p {
-          display: none; }
-          .page_menu .page_menu_inner .item.task .graph .number p:first-child {
-            display: block; }
+        right: 13px;
+        bottom: 20px;
+        height: 50px; }
+        .page_menu .page_menu_inner .item.task .graph.green .number p {
+          color: #43aea8; }
+        .page_menu .page_menu_inner .item.task .graph.yellow .number p {
+          color: #feb22e; }
+        .page_menu .page_menu_inner .item.task .graph.red .number p {
+          color: #ed6d44; }
+        .page_menu .page_menu_inner .item.task .graph .number {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 50px;
+          text-align: center;
+          line-height: 50px; }
+          .page_menu .page_menu_inner .item.task .graph .number p {
+            display: none; }
+            .page_menu .page_menu_inner .item.task .graph .number p:first-child {
+              display: block; }
+  .page_menu .page_menu_footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px; }
 
 /*detail*/
 .detail {
