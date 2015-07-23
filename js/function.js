@@ -1,8 +1,39 @@
+$(window).on('resize', function(){});
+$(function(){
+     function adjust(){
+          var h = $(window).height(); //ウィンドウの高さ
+          $('.main').css('height', h); //可変部分の高さを適用
+     }
+     adjust();
+     $(window).on('resize', function(){
+          adjust();
+     })
+});
+$(window).on('resize', function(){});
+$(function(){
+     function adjust(){
+          var h = $(window).height(); //ウィンドウの高さ
+          var h1= $('.page_menu .config').height(); //他要素の高さ
+          var h2= $('.page_menu .page_menu_footer').height(); //他要素の高さ
+          $('.page_menu_inner').css('height', h-h1-h2); //可変部分の高さを適用
+          $('.page_menu_footer').css('top', h-h1-h2); //可変部分の高さを適用
+     }
+     adjust();
+     $(window).on('resize', function(){
+          adjust();
+     })
+});
+
 $(function(){
   $(window).load(function(){
-     $(".global_menu_inner").mCustomScrollbar();
-     $(".page_menu_inner").mCustomScrollbar();
+     $(".global_menu_inner").mCustomScrollbar({
+       autoHideScrollbar: true
+     });
+     $(".page_menu_inner").mCustomScrollbar({
+       autoHideScrollbar: true
+     });
      $(".detail").mCustomScrollbar({
+       autoHideScrollbar: true,
        advanced:{
           updateOnContentResize: true
         }
@@ -86,36 +117,3 @@ window.onload=function(){
   getContext("2d")).Doughnut(Dougnut_data_yellow,options);
   var html = graph.generateLegend();
 }
-
-jQuery(function($) {
-  $('.note').each(function() {
-    var $target = $(this);
-
-    // オリジナルの文章を取得する
-    var html = $target.html();
-
-    // 対象の要素を、高さにautoを指定し非表示で複製する
-    var $clone = $target.clone();
-    $clone
-      .css({
-        display: 'none',
-        position : 'absolute',
-        overflow : 'visible'
-      })
-      .width($target.width())
-      .height('auto');
-
-    // DOMを一旦追加
-    $target.after($clone);
-
-    // 指定した高さになるまで、1文字ずつ消去していく
-    while((html.length > 0) && ($clone.height() > $target.height())) {
-      html = html.substr(0, html.length - 1);
-      $clone.html(html + '...');
-    }
-
-    // 文章を入れ替えて、複製した要素を削除する
-    $target.html($clone.html());
-    $clone.remove();
-  });
-});

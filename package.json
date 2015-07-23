@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/linkazia-mio/torio#readme",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-iconfont": "^3.0.3"
   }
 }
