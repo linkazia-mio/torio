@@ -2,6 +2,9 @@
 var gulp = require('gulp');
 //Sass書き出し
 var sass = require('gulp-sass');
+//icon font
+var iconfont = require('gulp-iconfont');
+var consolidate = require('gulp-consolidate');
 
 //scss監視
 gulp.task('watch', function() {
@@ -16,3 +19,34 @@ gulp.task('sass', function(){
     //出力先の指定
     .pipe(gulp.dest('css/'));
 });
+
+gulp.task('iconfont', function(){
+  gulp.src(['icons/*.svg'])
+    .pipe(iconfont({
+      fontName: 'icon',
+      fixedWidth: true,
+      startCodepoint: 0xF001
+    }))
+    .on('codepoints', function(codepoints, options) {
+      codepoints = codepoints.map(function(glyph) {
+        return {
+          name: glyph.name,
+          codepoint: glyph.codepoint.toString(16) // convert decimal to hex.
+        };
+      });
+
+    // CSS templating, e.g.
+      gulp.src('template/icon.css')
+        .pipe(consolidate('mustache', {
+          glyphs: codepoints,
+          fontName: 'icon',
+          fontPath: '../fonts/',
+          timeStamp: Date.now()
+      }))
+      .pipe(gulp.dest('css/'))
+  })
+
+  .pipe(gulp.dest('fonts/'));
+});
+
+gulp.task('default', ['iconfont']);
