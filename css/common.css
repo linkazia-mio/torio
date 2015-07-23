@@ -8,8 +8,7 @@
 /*Retina　対応*/
 html {
   font-family: "Helvetica Neue",Helvetica,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
-  color: #555555;
-  height: 100%; }
+  color: #555555; }
 
 pre {
   font-family: Monaco,Menlo,Consolas,"Courier New",monospace; }
@@ -19,7 +18,9 @@ header {
   position: fixed;
   top: 0;
   border-bottom: 1px solid #e2e2e2;
-  width: 100%; }
+  width: 100%;
+  z-index: 1000;
+  background: #fff; }
   header .header_inner {
     height: 52px;
     background: #fff;
@@ -161,10 +162,13 @@ header {
 
 /*Main*/
 .main {
-  position: fixed;
+  z-index: 100;
   top: 52px;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  position: fixed;
+  overflow: hidden;
   display: table;
   table-layout: fixed; }
   .main h3 {
@@ -176,10 +180,11 @@ header {
   display: table-cell;
   width: 20%;
   min-width: 100px;
-  height: 100%;
   padding: 10px 0;
-  overflow-y: scroll;
+  overflow: hidden;
   border-right: 1px solid #e2e2e2; }
+  .global_menu .global_menu_inner {
+    overflow-y: scroll; }
   .global_menu h3 {
     margin: 0 20px 16px 20px; }
   .global_menu ul {

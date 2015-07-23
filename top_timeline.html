@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- OGP/ -->
+    <meta property="og:type" content="">
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <!-- OGP -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/common2.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+  <div id="wrapper">
+    <!--Header/-->
+    <header>
+      <div class="header_inner">
+        <div class="header_line">
+        </div>
+         <p class="global_menu_btn">Global menu</p>
+         <div class="search">
+           <form method="post">
+             <input type="search"><input type="submit" value="送信する">
+           </form>
+         </div>
+         <div class="alart">
+           <div class="task">
+             <a href=""><p class="icon">タスク</p></a>
+           </div>
+           <div class="activity">
+             <a href=""><p class="icon">アクティビティ</p></a>
+           </div>
+           <div class="account">
+             <a href="">
+               <p class="noimage" style="display: none;">アカウント</p>
+               <p class="image"><img src="http://placehold.it/100x100"></p>
+             </a>
+           </div>
+         </div>
+       </div>
+    </header>
+    <!--/Header-->
+    <nav>
+      <div class="dashboard_top">
+        <div class="company_info" style="background: url(images/logo_hoshino_black.png) no-repeat top left;">
+          <label>
+            <img src="images/logo_medium.png" class="company_icon">
+            <input type="file" class="hide">
+          </label>
+          <!-- もしカンパニーが複数あったら表示 --><img src="images/arrow_back_white.svg" class="arrow">
+          <!-- 設定画面へのリンク --><img src="images/option_white.svg" class="option">
+        </div>
+        <div class="company_name">星野リゾート</div>
+      </div>
+      <div class="project">
+        <div class="box">
+          <div class="list">
+            <div class="tit">
+              <h2>プロジェクト</h2>
+              <p class="add"><img src="images/add.svg" data-toggle="modal" data-target="#myModal1"></p>
+            </div>
+            <ul>
+              <li>
+                <a href="#">
+                  <p class="logo"><img src="images/logo_medium.png"></p>
+                  <p class="name">ZUTTO</p>
+                  <!--<p class="num"><span>1</span></p>-->
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="logo"><img src="images/logo_medium.png"></p>
+                  <p class="name">家選びネット</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="logo"><img src="images/logo_medium.png"></p>
+                  <p class="name">アスニカ</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="logo"><img src="images/logo_medium.png"></p>
+                  <p class="name">地域イノベーター留学</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="logo"><img src="images/logo_medium.png"></p>
+                  <p class="name">Food Friends Fabric</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#myModal1" onfocus="this.blur();">
+                  <p class="add"><img src="images/add.svg"></p>
+                  <p class="name">新規追加</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="box">
+          <p class="home"><img src="images/home.svg"></p>
+          <p class="profile"><img src="images/profile.jpg"><span class="circle"><img src="images/circle_green.svg"></span></p>
+          <p class="task"><img src="images/check_gray.svg"></p>
+        </div>
+      </div>
+    </nav>
+    <div id="main">
+      <div class="header">
+        <ul>
+          <li class="active"><a href="#">タイムライン</a></li>
+          <li><a href="#">プロジェクト</a></li>
+          <li><a href="#">マイタスク</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="box">
+          <h2>Welcome</h2>
+          <div class="day_driver">昨日</div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/profile.jpg')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">佐藤 太郎</a><span class="date">13:00</span></p>
+              <p class="text">kenta. Great! Now, what is your last name?</p>
+            </div>
+          </div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/avatar_01.png')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">伊藤 一郎</a><span class="date">13:00</span></p>
+              <p class="text">Nice to meet you kenta kenta! (Tip: If you ever need to change your name or profile information, you can do so by editing your Profile Page.)</p>
+            </div>
+          </div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/profile.jpg')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">佐藤 太郎</a><span class="date">13:00</span></p>
+              <p class="text">You can also add a photo there. Things look so much better with a picture of you. I’m happy to wait while you do that, but if you want to just keep going, say “continue” or “keep going” or even “go”.</p>
+            </div>
+          </div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/avatar_01.png')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">伊藤 一郎</a><span class="date">13:00</span></p>
+              <p class="text">URLを自動要約してくれるサイトちょっと面白かった。</p>
+            </div>
+          </div>
+          <div class="day_driver">今日</div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/profile.jpg')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">佐藤 太郎</a><span class="date">13:00</span></p>
+              <p class="text">
+              Googleカレンダー　土日の背景色<br>
+              <a href="#">http://r-matsuya.net/post-735-735.html</a>
+              </p>
+            </div>
+          </div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/avatar_01.png')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">伊藤 一郎</a><span class="date">13:00</span></p>
+              <p class="text">postgresの8.3以降の新機能（HOTとFILLFACTOR）</p>
+              <p class="text"><a href="#" target="_blank">http://lets.postgresql.jp/documents/tutorial/hot_1/hot1_1</a></p>
+              <p class="text">地味に知らないだけで使えばもっと軽くできるかも。</p>
+            </div>
+          </div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/profile.jpg')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">佐藤 太郎</a><span class="date">13:00</span></p>
+              <p class="text">小松さんが教えてくれた、対談・インタビューの全文書き起こしサービスlogmi<br>
+野々村議員の書き起こしがヤバい...。</p>
+            </div>
+          </div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/avatar_01.png')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">伊藤 一郎</a><span class="date">13:00</span></p>
+              <p class="text">野々村竜太郎県議、”号泣”記者会見　「キッチリ報告してんのに、何で自分を曲げないといかんのや」</p>
+            </div>
+          </div>
+          <div class="message">
+            <div><a href="#" target="" class="member_image" style="background-image: url('images/profile.jpg')"></a></div>
+            <div class="message_sender">
+              <p class="tit"><a href="#" target="">佐藤 太郎</a><span class="date">13:00</span></p>
+              <p class="text">明日には返すからさ</p>
+              <p class="text">いいじゃん貸してくれよ</p>
+              <p class="text">裏DVDだろ？</p>
+              <p class="text">エロそうだなぁ</p>
+              <p class="text">おしりかじり虫</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <a href="#"><img src="images/favorite.svg"></a><!-- いいね！見たよ！みたいなping的な位置づけです -->
+        <div class="intercom">
+          <ul>
+            <li><img src="images/attachment.svg"></li>
+            <li><img src="images/emoji.svg"></li>
+          </ul>
+          <textarea placeholder="コメントを書く..."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(window).on('resize', function(){});
+    $(function(){
+         function adjust(){
+              var h = $(window).height(); //ウィンドウの高さ
+              $('nav,#main').css('height', h); //可変部分の高さを適用
+         }
+         adjust();
+         $(window).on('resize', function(){
+              adjust();
+         })
+    });
+    $(window).on('load resize', function(){
+         var w = $(window).width() - 300; //ウィンドウの幅
+         $('#main,#main .bottom').css('width', w); //可変部分の幅を適用
+    });
+    $(window).on('resize', function(){});
+    $(function(){
+         function adjust(){
+              var h = $(window).height(); //ウィンドウの高さ
+              var h1= $('nav .bottom').height(); //他要素の高さ
+              var h2= $('.dashboard_top').height(); //他要素の高さ
+              $('.project').css('height', h-h1-h2); //可変部分の高さを適用
+              $('#main .content').css('height', h-123); //可変部分の高さを適用
+         }
+         adjust();
+         $(window).on('resize', function(){
+              adjust();
+         })
+    });
+  </script>
+  <script>
+    $(document).ready( function() {
+         $(".project,.content").mCustomScrollbar({
+
+           scrollInertia: 0, //スクロール加速度 OSデフォルトと異なると使いにくいので0
+           mouseWheelPixels: 0, //スクロール量 デフォルトに近づけた。お好みで変更
+           autoHideScrollbar: true, //マウスオーバーしていないときにスクロールバーを隠すか お好みで
+
+           scrollButtons:{
+             enable: false, //ボタンを出すか。個人的には不要（falseにしたら以下は指定不要）
+             scrollType: "continuous", //ボタンを押してる間だけ進む
+             scrollSpeed: 0, //ボタンのスクロールスピード OSデフォルトに近づけた。お好みで変更
+             scrollAmount: 0 //ボタンのスクロール量 OSデフォルトに近づけた。お好みで変更
+           },
+           advanced: {
+             updateOnContentResize: true, //自動的にスクロールバーを調整してくれる
+             autoScrollOnFocus: true, //フォーカスした場所にスクロールしてくれる
+           },
+           theme: "dark-thin" //テーマを選ぶ。 CSSでカスタマイズする場合は不要
+
+         });
+    });
+  </script>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">新規作成</h4>
+        </div>
+        <div class="modal-body">
+          <div class="project_profile">
+            <div class="upload">
+              <p class="img"><img src="images/create_white.svg"></p>
+              <!--<h3 class="edit_name">プロジェクト名</h3>-->
+              <input type="text" name="" class="text_field" placeholder="プロジェクト名を入力してください" value="">
+            </div>
+            <p class="upload_bg"><img src="images/create_white.svg"></p>
+          </div>
+          <div class="group">
+            <div class="title">
+              <h3>メンバー</h3>
+            </div>
+            <div class="content">
+              <p class="member">
+                <input type="text" name="" class="default" placeholder="メンバーを追加する" value="">
+                <span><img src="images/person-add.svg"></span>
+              </p>
+              <!--<ul class="member_add">
+                <li><img src="images/profile.jpg"></li>
+                <li><img src="images/profile.jpg"></li>
+                <li><img src="images/profile.jpg"></li>
+              </ul>-->
+            </div>
+          </div>
+          <div class="group">
+            <div class="title">
+              <h3>目標</h3>
+            </div>
+            <div class="content">
+              <div class="tg-list">
+                <div class="tg-list-item">
+                  <input class="tgl tgl-light" id="cb1" type="checkbox">
+                  <label class="tgl-btn" for="cb1"></label>
+                </div>
+                <label for="cb1"><p class="tg-text goal">設定する</p></label>
+              </div>
+              <div class="more">
+                <p class="text">
+                  <input type="text" name="" class="default" placeholder="目標を入力してください。" value="">
+                  <span><img src="images/create_gray.svg"></span>
+                </p>
+                <p class="date">
+                  <input type="text" name="" class="default" placeholder="期日を設定してください。" value="">
+                  <span><img src="images/event_gray.svg"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">作成する</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      var goalBtn = $('.modal-body .group .content .more');
+      $(".tgl").on('click', function(){
+          $(this).toggleClass("on");
+          if ($(this).hasClass("on")) {
+              $('.goal').text('設定しない');
+          } else {
+              $('.goal').text('設定する');
+          }
+          goalBtn.slideToggle();
+      });
+  </script>
+
+  </body>
+</html>

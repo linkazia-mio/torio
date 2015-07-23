@@ -1,3 +1,9 @@
+(function($){
+        $(window).load(function(){
+            $(".content").mCustomScrollbar();
+        });
+    })(jQuery);
+
 //可変ボックス
 window.onload=function(){
   jQuery(function() {
