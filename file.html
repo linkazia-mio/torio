@@ -1,11 +1,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TORIO</title>
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/classie.js"></script>
-    <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
     <script type="text/javascript" src="js/function.js"></script>
     <script>
 			// this is important for IEs
@@ -13,131 +15,205 @@
 		</script>
 		<script src="js/cssParser.js"></script>
 		<script src="js/css-filters-polyfill.js"></script>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" href="jquery-ui.theme.min.css">
     <link rel="stylesheet" href="css/sanitize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="css/component.css" />
     <link rel="stylesheet" href="css/common.css">
   </head>
   <body>
-    <!--Header/-->
-    <header>
-      <div class="header_inner">
-        <div class="header_line">
-        </div>
-         <p class="global_menu_btn">Global menu</p>
-         <div class="search">
-           <form method="post">
-             <input type="search"><input type="submit" value="送信する">
-           </form>
+    <div class="wrapper">
+      <!--Header/-->
+      <header>
+        <div class="header_inner">
+          <div class="header_line">
+          </div>
+           <p class="global_menu_btn">Global menu</p>
+           <div class="search">
+             <form method="post">
+               <input type="search"><input type="submit" value="送信する">
+             </form>
+           </div>
+           <div class="alart">
+             <div class="task">
+               <a href=""><p class="icon">タスク</p></a>
+             </div>
+             <div class="activity">
+               <a href=""><p class="icon">アクティビティ</p></a>
+             </div>
+             <div class="account">
+               <a href="">
+                 <p class="noimage" style="display: none;">アカウント</p>
+                 <p class="image"><img src="http://placehold.it/100x100"></p>
+               </a>
+             </div>
+           </div>
          </div>
-         <div class="alart">
-           <div class="task">
-             <a href=""><p class="icon">タスク</p></a>
-           </div>
-           <div class="activity">
-             <a href=""><p class="icon">アクティビティ</p></a>
-           </div>
-           <div class="account">
-             <a href="">
-               <p class="noimage" style="display: none;">アカウント</p>
-               <p class="image"><img src="http://placehold.it/100x100"></p>
-             </a>
-           </div>
-         </div>
-       </div>
-    </header>
-    <!--/Header-->
-    <!--Main/-->
-    <div class="main container">
-      <div class="global_menu">
-        <div class="global_menu_inner">
-        <h3>お気に入り</h3>
-        <ul>
-          <li><a href="" class="unread"><span class="global_list_noimage"></span>星乃リゾート</a></li>
-          <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-        </ul>
-        <div class="groups">
-          <h3>グループ</h3>
-  				<p class="add"><button class="md-trigger" data-modal="modal-16"><span></span></button></p>
-          <ul>
-            <li><a href="" class="selected"><span class="global_list_noimage"></span>トヨタホームタウン</a></li>
-            <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage"></span>星乃リゾート</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
-          </ul>
+      </header>
+      <!--/Header-->
+      <!--Main/-->
+      <div class="main container">
+        <!--Global_menu/-->
+        <div class="global_menu ui-widget-content">
+          <div class="global_menu_inner">
+            <h3>お気に入り</h3>
+            <ul>
+              <li><a href="" class="unread"><span class="global_list_noimage"></span>星乃リゾート</a></li>
+              <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+            </ul>
+            <div class="groups">
+              <h3>グループ</h3>
+      				<p class="add"><button class="md-trigger" data-modal="modal-16"><span></span></button></p>
+              <ul>
+                <li><a href="" class="selected"><span class="global_list_noimage"></span>トヨタホームタウン</a></li>
+                <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage"></span>星乃リゾート</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
+              </ul>
+            </div>
+            <div class="member">
+              <h3>メンバー</h3>
+              <p class="add"><button class="md-trigger" data-modal="modal-16"><span></span></button></p>
+              <ul>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
+                <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="member">
-          <h3>メンバー</h3>
-          <p class="add"><button class="md-trigger" data-modal="modal-16"><span></span></button></p>
-          <ul>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-            <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松健太</a></li>
-            <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>小松憲太</a></li>
-          </ul>
+        <!--/Global_menu-->
+        <!--Page_menu/-->
+        <div class="page_menu ui-widget-content">
+          <div class="config">
+            <p class="title">All page</p>
+            <p>2</p>
+          </div>
+          <!--Page_menu_inner/-->
+          <div class="page_menu_inner">
+            <!--task/-->
+            <div class="item task">
+              <a href="" class="unread">
+                <p class="title">役割分担</p>
+                <ul>
+                  <li><span class="name">未対応タスク</span><span class="value">：25件</span></li>
+                  <li><span class="name">期限が近いタスク</span><span class="value">：10件</span></li>
+                </ul>
+                <div class="graph green">
+                  <canvas id="task_graph_green" height="50" width="50"></canvas>
+                  <div class="number">
+                    <p>60%</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!--/task-->
+            <!--note/-->
+            <div class="item note">
+              <a href="" class="unread">
+                <p class="title">エネルギー関連の記事</p>
+                <p>電力会社の電気はいりません！独立型の自家発電で、晴耕雨読の日々をおくる佐藤隆電で、晴耕雨読の日々をおくる佐藤隆</p>
+              </a>
+            </div>
+            <!--/note-->
+            <!--task/-->
+            <div class="item task">
+              <a href="" class="unread">
+                <p class="title">PCリニューアル</p>
+                <ul>
+                  <li><span class="name">未対応タスク</span><span class="value">：25件</span></li>
+                  <li><span class="name">期限が近いタスク</span><span class="value">：10件</span></li>
+                </ul>
+                <div class="graph red">
+                  <canvas id="task_graph_red" height="50" width="50"></canvas>
+                  <div class="number">
+                    <p>10%</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!--/task-->
+            <!--task/-->
+            <div class="item task">
+              <a href="" class="unread">
+                <p class="title">PCリニューアル</p>
+                <ul>
+                  <li><span class="name">未対応タスク</span><span class="value">：25件</span></li>
+                  <li><span class="name">期限が近いタスク</span><span class="value">：10件</span></li>
+                </ul>
+                <div class="graph yellow">
+                  <canvas id="task_graph_yellow" height="50" width="50"></canvas>
+                  <div class="number">
+                    <p>40%</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!--/task-->
+          </div>
+          <!--/Page_menu_inner-->
         </div>
+        <!--/Page_menu-->
+        <!--Detail/-->
+        <div class="detail ui-widget-content">
+          <p>このボックスは、サイズを変更できる。</p>
+        </div>
+        <!--/Detail-->
       </div>
-      <div class="page_menu" class="ui-widget-content">
-        <p>このボックスは、サイズを変更できる。</p>
-      </div>
-      <div class="detail" class="ui-widget-content">
-        <p>このボックスは、サイズを変更できる。</p>
-      </div>
+      <!--/Main-->
+      <div class="md-modal md-effect-16" id="modal-16">
+  			<div class="md-content">
+  				<h3>Modal Dialog</h3>
+  				<div>
+  					<p>This is a modal window. You can do the following things with it:</p>
+  					<ul>
+  						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+  						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+  						<li><strong>Close:</strong> click on the button below to close the modal.</li>
+  					</ul>
+  					<button class="md-close">Close me!</button>
+  				</div>
+  			</div>
+  		</div>
+      <div class="md-overlay"></div><!-- the overlay element -->
+  		<script src="js/modalEffects.js"></script>
     </div>
-    <!--/Main-->
-    <div class="md-modal md-effect-16" id="modal-16">
-			<div class="md-content">
-				<h3>Modal Dialog</h3>
-				<div>
-					<p>This is a modal window. You can do the following things with it:</p>
-					<ul>
-						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-						<li><strong>Close:</strong> click on the button below to close the modal.</li>
-					</ul>
-					<button class="md-close">Close me!</button>
-				</div>
-			</div>
-		</div>
-    <div class="md-overlay"></div><!-- the overlay element -->
-		<script src="js/modalEffects.js"></script>
   </body>
 
 </html>
