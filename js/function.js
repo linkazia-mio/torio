@@ -24,6 +24,13 @@ $(function(){
      })
 });
 
+//Activity
+$(document).ready(function(){
+  $(".activity p").click(function () {
+    $(".activity_box").toggle();
+  });
+ });
+
 $(function(){
   $(window).load(function(){
      $(".global_menu_inner").mCustomScrollbar({
