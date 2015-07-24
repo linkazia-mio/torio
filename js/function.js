@@ -25,7 +25,7 @@ $(function(){
 });
 
 $(document).click(function() {
-  $('.option_box,.add_page,.activity_box').hide();
+  $('.option_box,.add_page,.activity_box,.check_box').hide();
 });
 
 //Activity
@@ -33,6 +33,16 @@ $(document).ready(function(){
   $(".activity p").click(function () {
     $(".activity_box").toggle( 'fade', '', 100 );
     event.stopPropagation();
+    $('.add_page,.check_box,.option_box').hide();
+  });
+});
+
+//Check box
+$(document).ready(function(){
+  $(".config .check").click(function () {
+    $(".check_box").toggle( 'fade', '', 100 );
+    event.stopPropagation();
+    $('.add_page,.activity_box,.option_box').hide();
   });
 });
 
@@ -41,7 +51,7 @@ $(document).ready(function(){
   $(".config .option").click(function () {
     $(".option_box").toggle( 'fade', '', 100 );
     event.stopPropagation();
-    $('.add_page,.activity_box').hide();
+    $('.add_page,.activity_box,.check_box').hide();
   });
 });
 

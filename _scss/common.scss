@@ -480,6 +480,11 @@ header {
         }
       }
     }
+    .check_box {
+      @extend .option_box;
+      height: auto;
+      left: 50px;
+    }
   }
   .page_menu_inner {
     overflow: hidden;
