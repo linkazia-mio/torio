@@ -59,18 +59,6 @@ $img_path: "../images/";
   -ms-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
-/*Retina　対応*/
-@mixin image-2x($image, $width, $height) {
-  @media (min--moz-device-pixel-ratio: 1.3),
-         (-o-min-device-pixel-ratio: 2.6/2),
-         (-webkit-min-device-pixel-ratio: 1.3),
-         (min-device-pixel-ratio: 1.3),
-         (min-resolution: 1.3dppx) {
-    /* on retina, use image that's scaled by 2 */
-    background-image: url($image);
-    background-size: $width $height;
-  }
-}
 
 html {
   overflow: hidden !important;
@@ -122,15 +110,14 @@ header {
     position: relative;
   }
   .global_menu_btn {
-    @include filter(0);
+    @include fontsize(3.0);
     position: absolute;
-    width: 15px;
-    height: 10px;
     left: 20px;
     top: 50%;
-    margin-top: -5px;
+    margin-top: -15px;
+    color: $white_brack;
     &:hover {
-      @include filter();
+      color: $link_green;
       cursor: pointer;
     }
   }
@@ -171,6 +158,12 @@ header {
   top: 50%;
   left: 50%;
   margin: -16px 0 0 -30%;
+  .icon-search {
+    @include fontsize(2.8);
+    color: $white_brack;
+    position: absolute;
+    right: 0;
+  }
   input {
     &[type="search"] {
       @include fontsize(1.4);
@@ -183,8 +176,6 @@ header {
       position: absolute;
       right: 1px;
       width: 32px;
-      background: url('#{$img_path}icon_header_search.png') #fff no-repeat center;
-      @include image-2x("#{$img_path}icon_header_search@2x.png", 15px, 15px);
       height: 0;
       padding-top: 30px;
       overflow: hidden;
@@ -447,7 +438,7 @@ header {
       right: 40px;
       top: 0;
       i {
-        @include fontsize(2.4);
+        @include fontsize(2.2);
       }
       .number {
         vertical-align: super;
