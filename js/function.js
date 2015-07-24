@@ -27,9 +27,17 @@ $(function(){
 //Activity
 $(document).ready(function(){
   $(".activity p").click(function () {
-    $(".activity_box").toggle();
+    $(".activity_box").toggle( 'fade', '', 100 );
   });
- });
+});
+
+//Add page
+$(document).ready(function(){
+  $(".page_menu_footer p").click(function () {
+    $(".add_page").toggle( 'fade', '', 100 );
+  });
+});
+
 
 $(function(){
   $(window).load(function(){
