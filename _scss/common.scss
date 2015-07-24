@@ -125,15 +125,10 @@ header {
     @include filter(0);
     position: absolute;
     width: 15px;
-    height: 0;
-    padding-top: 10px;
+    height: 10px;
     left: 20px;
     top: 50%;
     margin-top: -5px;
-    background: url('#{$img_path}icon_global_menu.png') no-repeat center;
-    @include image-2x("#{$img_path}icon_global_menu@2x.png", 15px, 10px);
-    overflow: hidden;
-    display: block;
     &:hover {
       @include filter();
       cursor: pointer;
@@ -414,6 +409,7 @@ header {
     border-right: 1px solid $border_gray;
   }
   .config {
+    position: relative;
     height: 50px;
     padding: 0 10px;
     border-bottom: 1px solid $border_gray;
@@ -423,6 +419,64 @@ header {
       color: $brack;
       font-weight: bold;
       float: left;
+    }
+    .favorite {
+      @include fontsize(2.2);
+      color: $white_brack;
+      position: absolute;
+      right: 75px;
+      top: 12px;
+      &:hover {
+        color: $yellow;
+      }
+    }
+    .viewers {
+      color: $white_brack;
+      position: absolute;
+      right: 40px;
+      top: 0;
+      i {
+        @include fontsize(2.4);
+      }
+      .number {
+        vertical-align: super;
+      }
+      &:hover {
+        color: $link_green;
+      }
+    }
+    .option {
+      @include fontsize(2.8);
+      color: $white_brack;
+      position: absolute;
+      right: 7px;
+      top: 10px;
+      &:hover {
+        color: $link_green;
+      }
+    }
+    .option_box {
+      width: 250px;
+      height: 140px;
+      left: 190px;
+      top: 45px;
+      z-index: 1000;
+      ul {
+        padding: 10px 0;
+        li {
+          line-height: 40px;
+          a {
+            padding: 0 20px;
+            display: block;
+            height: 40px;
+            &:hover {
+              background: $torio_green;
+              color: white;
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
   }
   .page_menu_inner {

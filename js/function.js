@@ -24,10 +24,24 @@ $(function(){
      })
 });
 
+$(document).click(function() {
+  $('.option_box,.add_page,.activity_box').hide();
+});
+
 //Activity
 $(document).ready(function(){
   $(".activity p").click(function () {
     $(".activity_box").toggle( 'fade', '', 100 );
+    event.stopPropagation();
+  });
+});
+
+//Option box
+$(document).ready(function(){
+  $(".config .option").click(function () {
+    $(".option_box").toggle( 'fade', '', 100 );
+    event.stopPropagation();
+    $('.add_page,.activity_box').hide();
   });
 });
 
@@ -35,6 +49,8 @@ $(document).ready(function(){
 $(document).ready(function(){
   $(".page_menu_footer p").click(function () {
     $(".add_page").toggle( 'fade', '', 100 );
+    event.stopPropagation();
+    $('.option_box,.activity_box').hide();
   });
 });
 
