@@ -340,6 +340,16 @@ header {
       color: #555555;
       font-weight: bold;
       float: left; }
+      .page_menu .config .title span {
+        font-weight: normal;
+        padding-left: 5px; }
+    .page_menu .config .check {
+      font-size: 28px;
+      font-size: 2.8rem;
+      color: #999999;
+      position: absolute;
+      left: 80px;
+      top: 12px; }
     .page_menu .config .favorite {
       font-size: 22px;
       font-size: 2.2rem;

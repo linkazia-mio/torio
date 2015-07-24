@@ -419,6 +419,17 @@ header {
       color: $brack;
       font-weight: bold;
       float: left;
+      span {
+        font-weight: normal;
+        padding-left: 5px;
+      }
+    }
+    .check {
+      @include fontsize(2.8);
+      color: $white_brack;
+      position: absolute;
+      left: 80px;
+      top: 12px;
     }
     .favorite {
       @include fontsize(2.2);
