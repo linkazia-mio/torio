@@ -42,6 +42,18 @@ ul li {
   .icon {
     font-family: icon; } }
 
+/*popover*/
+.popover {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(150, 150, 150, 0.4); }
+
 /*Header*/
 header {
   border-bottom: 1px solid #e2e2e2;
@@ -75,18 +87,9 @@ header {
       filter: saturate(100%);
       cursor: pointer; }
   header .activity_box {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
-    display: none;
     width: 400px;
-    position: absolute;
-    z-index: 1000;
     right: 10px;
-    top: 60px;
-    background: #fff;
-    box-shadow: 0px 0px 10px rgba(150, 150, 150, 0.4); }
+    top: 60px; }
 
 /*Torio Line*/
 .header_line {
@@ -371,7 +374,7 @@ header {
         top: 0;
         width: 0;
         height: 0;
-        border-top: 32px solid #db4c3f;
+        border-top: 25px solid #db4c3f;
         border-right: 8px solid #db4c3f;
         border-bottom: 7px solid #fff;
         border-left: 8px solid #db4c3f; }
@@ -422,7 +425,7 @@ header {
           .page_menu .page_menu_inner .item.note .text::after {
             content: "…"; }
       .page_menu .page_menu_inner .item.task ul {
-        margin-right: 60px;
+        margin-right: 55px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis; }
@@ -458,6 +461,9 @@ header {
             .page_menu .page_menu_inner .item.task .graph .number p:first-child {
               display: block; }
   .page_menu .page_menu_footer {
+    font-size: 40px;
+    font-size: 4rem;
+    color: #43aea8;
     display: block;
     z-index: 1000;
     position: absolute;
@@ -465,7 +471,44 @@ header {
     left: 0;
     height: 50px;
     border-top: 1px solid #e2e2e2;
-    background: #fff; }
+    background: #fff;
+    text-align: center;
+    padding-top: 3px; }
+    .page_menu .page_menu_footer .add_page {
+      width: 250px;
+      height: 140px;
+      left: 105px;
+      bottom: 40px;
+      padding-top: 10px; }
+      .page_menu .page_menu_footer .add_page ul {
+        text-align: left; }
+        .page_menu .page_menu_footer .add_page ul li {
+          font-size: 12px;
+          font-size: 1.2rem;
+          font-weight: bold;
+          line-height: 40px;
+          position: relative; }
+          .page_menu .page_menu_footer .add_page ul li.add_page_note a i, .page_menu .page_menu_footer .add_page ul li.add_page_task a i, .page_menu .page_menu_footer .add_page ul li.add_page_file a i {
+            color: #feb22e; }
+          .page_menu .page_menu_footer .add_page ul li.add_page_note a:hover i, .page_menu .page_menu_footer .add_page ul li.add_page_task a:hover i, .page_menu .page_menu_footer .add_page ul li.add_page_file a:hover i {
+            color: white; }
+          .page_menu .page_menu_footer .add_page ul li.add_page_task a i {
+            color: #43aea8; }
+          .page_menu .page_menu_footer .add_page ul li.add_page_file a i {
+            color: #ed6d44; }
+          .page_menu .page_menu_footer .add_page ul li a {
+            padding: 0 20px 0 52px;
+            display: block;
+            height: 40px; }
+            .page_menu .page_menu_footer .add_page ul li a i:before {
+              font-size: 20px;
+              font-size: 2rem;
+              position: absolute;
+              top: 10px;
+              left: 20px; }
+            .page_menu .page_menu_footer .add_page ul li a:hover {
+              background: #43aea8;
+              color: white; }
 
 /*detail*/
 .detail {

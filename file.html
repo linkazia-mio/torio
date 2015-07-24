@@ -41,7 +41,7 @@
                <a href=""><p class="icon">タスク</p></a>
              </div>
              <div class="activity">
-               <p class="icon"><span class="icon-access-alarms"></span></p>
+               <p class="icon"><i class="icon-access-alarms"></i></p>
              </div>
              <div class="account">
                <a href="">
@@ -52,7 +52,7 @@
            </div>
          </div>
          <!--Activity_box/-->
-         <div class="activity_box">
+         <div class="activity_box popover">
            <h3 class="icon">アクティビティ</h3>
            すべて
            あなた
@@ -170,7 +170,7 @@
             <!--task/-->
             <div class="item task">
               <span class="check"></span>
-              <a href="" class="unread">
+              <a href="">
                 <p class="title">PCリニューアル</p>
                 <ul>
                   <li><span class="name">未対応タスク</span><span class="value">：25件</span></li>
@@ -187,7 +187,7 @@
             <!--/task-->
             <!--file/-->
             <div class="item file">
-              <a href="">
+              <a href="" class="unread">
                 <p class="title">デザインサンプル</p>
                 <ul>
                   <li><img src="http://placehold.it/100x100"></li>
@@ -199,7 +199,7 @@
             <!--/file-->
             <!--task/-->
             <div class="item task">
-              <a href="" class="unread">
+              <a href="">
                 <p class="title">PCリニューアル</p>
                 <ul>
                   <li><span class="name">未対応タスク</span><span class="value">：25件</span></li>
@@ -217,7 +217,14 @@
           </div>
           <!--/Page_menu_inner-->
           <div class="page_menu_footer">
-            <a href="">add</a>
+            <p class="icon-add"></p>
+            <div class="add_page popover">
+              <ul>
+                <li class="add_page_note"><a href=""><i class="icon-access-alarms"></i>ノート</a></li>
+                <li class="add_page_task"><a href=""><i class="icon-access-alarms"></i>タスク</a></li>
+                <li class="add_page_file"><a href=""><i class="icon-access-alarms"></i>ファイル</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <!--/Page_menu-->
