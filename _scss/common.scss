@@ -101,11 +101,6 @@ ul {
     list-style: none;
   }
 }
-.icon {
-  @font-face {
-    font-family: icon;
-  }
-}
 /*popover*/
 .popover {
   @include border_radius();
@@ -212,34 +207,30 @@ header {
   width: 130px;
   height: 30px;
   margin-top: -15px;
-  a {
-    -webkit-filter: saturate(0%);
-    filter: saturate(0%);
+  p {
+    color: $white_brack;
     @include easeout;
     display: block;
     &:hover {
-      -webkit-filter: saturate(100%);
-      filter:saturate(100%);
+      color: $link_green;
+      cursor: pointer;
     }
   }
   .task {
     display: inline-block;
-    a {
-      .icon {
-        height: 0;
+    p {
+      @include fontsize(3.0);
+      &.icon {
+        height: 30px;
         width: 15px;
-        padding-top: 30px;
-        overflow: hidden;
-        background: url('#{$img_path}icon_task.png') #fff no-repeat center;
-        @include image-2x("#{$img_path}icon_task@2x.png", 15px, 15px);
       }
     }
   }
   .activity {
     display: inline-block;
-    margin-left: 25%;
+    margin-left: 23%;
     p {
-      @include fontsize(1.8);
+      @include fontsize(3.0);
       &.icon {
         height: 30px;
         width: 15px;
@@ -502,6 +493,7 @@ header {
         height: 115px;
         .text {
           height: 40px;
+          line-height: 1.8;
           overflow: hidden;
           text-overflow: ellipsis;
           &::after {
@@ -516,7 +508,7 @@ header {
           white-space: nowrap;
           text-overflow: ellipsis;
           li {
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             .name {
               float: left;
               display: block;
@@ -639,7 +631,7 @@ header {
               }
             }
             &:hover {
-              background: $green;
+              background: $torio_green;
               color: white;
             }
           }
