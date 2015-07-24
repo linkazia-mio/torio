@@ -15,7 +15,7 @@ $(function(){
           var h = $(window).height(); //ウィンドウの高さ
           var h1= $('.page_menu .config').height(); //他要素の高さ
           var h2= $('.page_menu .page_menu_footer').height(); //他要素の高さ
-          $('.page_menu_inner').css('height', h-h1-h2); //可変部分の高さを適用
+          $('.page_menu_inner').css('height', h-h1-h2-49); //可変部分の高さを適用
           $('.page_menu_footer').css('top', h-h1-h2); //可変部分の高さを適用
      }
      adjust();
@@ -34,14 +34,26 @@ $(document).ready(function(){
 $(function(){
   $(window).load(function(){
      $(".global_menu_inner").mCustomScrollbar({
-       autoHideScrollbar: true
+       autoHideScrollbar: true,
+       scrollInertia: 0,
+       advanced:{
+          autoScrollOnFocus: true,
+          updateOnContentResize: true
+        }
      });
      $(".page_menu_inner").mCustomScrollbar({
-       autoHideScrollbar: true
+       autoHideScrollbar: true,
+       scrollInertia: 0,
+       advanced:{
+          autoScrollOnFocus: true,
+          updateOnContentResize: true
+        }
      });
      $(".detail").mCustomScrollbar({
        autoHideScrollbar: true,
+       scrollInertia: 0,
        advanced:{
+          autoScrollOnFocus: true,
           updateOnContentResize: true
         }
      });

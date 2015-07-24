@@ -73,10 +73,12 @@ $img_path: "../images/";
 }
 
 html {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 body {
   font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+  @include fontsize(1.4);
+  line-height: 1.6;
   color: $brack;
   /*-webkit-font-smoothing: antialiased;*/
   width: 100%;
@@ -419,7 +421,7 @@ header {
   }
   .config {
     height: 50px;
-    padding: 0 20px;
+    padding: 0 10px;
     border-bottom: 1px solid $border_gray;
     line-height: 50px;
     .title {
@@ -431,17 +433,51 @@ header {
   }
   .page_menu_inner {
     overflow: hidden;
+    height: 100%;
     .item {
       @include fontsize(1.2);
       position: relative;
-      padding: 20px;
+      padding: 20px 20px 20px 23px;
       color: $brack;
       border-bottom: 1px solid $border_gray;
+      .check {
+        position: absolute;
+        right: 10px;
+        top: 0;
+      	width: 0;
+      	height: 0;
+      	border-top: 32px solid $dark_red;
+      	border-right: 8px solid $dark_red;
+      	border-bottom: 7px solid #fff;
+      	border-left: 8px solid $dark_red;
+      }
       .title {
         @include fontsize(1.4);
         color: $brack;
         font-weight: bold;
         margin-bottom: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      a {
+        &.unread {
+          .title {
+            color: $green;
+            &:before {
+              @include border_radius(3px);
+              position: absolute;
+              top: 30px;
+              left: 10px;
+              margin-top: -3px;
+              z-index: 1000;
+              content: "";
+              width: 5px;
+              height: 5px;
+              background: $torio_green;
+            }
+          }
+        }
       }
       &.file {
         ul {
@@ -461,9 +497,13 @@ header {
       }
       &.note {
         height: 115px;
-        overflow: hidden;
-        p {
-
+        .text {
+          height: 40px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          &::after {
+            content: "…";
+          }
         }
       }
       &.task {
