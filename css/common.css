@@ -175,7 +175,7 @@ header {
         height: 30px;
         width: 15px; }
         .alart .task p.icon .icon-inbox-task-outline:before {
-          font-size: 25px; }
+          font-size: 23px; }
   .alart .activity {
     display: inline-block;
     margin-left: 21%; }
@@ -186,7 +186,7 @@ header {
         height: 30px;
         width: 15px; }
         .alart .activity p.icon .icon-notifications-outline:before {
-          font-size: 25px; }
+          font-size: 23px; }
   .alart .account {
     position: absolute;
     top: -3px;
@@ -233,7 +233,9 @@ header {
     border: none;
     border-right: 1px solid #d9d9d9; }
   .global_menu .global_menu_inner h3 {
-    margin: 0 20px 10px 20px; }
+    margin: 0 20px 5px 20px;
+    font-size: 13px;
+    font-size: 1.3rem; }
     .global_menu .global_menu_inner h3:first-child {
       margin-top: 2rem; }
   .global_menu .global_menu_inner ul {
@@ -306,7 +308,9 @@ header {
     .global_menu .global_menu_inner .groups .add, .global_menu .global_menu_inner .member .add {
       position: absolute;
       right: 17px;
-      top: 1px; }
+      top: 0; }
+      .global_menu .global_menu_inner .groups .add .icon-add-circle-outline:before, .global_menu .global_menu_inner .member .add .icon-add-circle-outline:before {
+        font-size: 20px; }
       .global_menu .global_menu_inner .groups .add button:hover, .global_menu .global_menu_inner .member .add button:hover {
         cursor: pointer; }
       .global_menu .global_menu_inner .groups .add button:focus, .global_menu .global_menu_inner .member .add button:focus {
