@@ -135,13 +135,17 @@ header {
   .global_menu_btn {
     @include fontsize(3.0);
     position: absolute;
-    left: 14px;
-    top: 50%;
-    margin-top: -14px;
-    color: $white_brack;
+    left: 15px;
+    top: 15px;
+    color: $brack;
     &:hover {
       color: $link_green;
       cursor: pointer;
+    }
+    .icon-automation-arrow{
+      &:before{
+        font-size: 25px;
+      }
     }
   }
   .activity_box {
@@ -177,7 +181,7 @@ header {
 .search {
   @include border_radius(2px);
   position: absolute;
-  width: 60%;
+  width: 50%;
   height: 32px;
   border: 1px solid $border_gray;
   top: 50%;
@@ -214,13 +218,12 @@ header {
 /*Alart*/
 .alart {
   position: absolute;
-  top: 50%;
-  right: 14px;
-  width: 130px;
+  top: 15px;
+  right: 15px;
+  width: 118px;
   height: 30px;
-  margin-top: -14px;
   p {
-    color: $white_brack;
+    color: $brack;
     @include easeout;
     display: block;
     &:hover {
@@ -235,30 +238,48 @@ header {
       &.icon {
         height: 30px;
         width: 15px;
+        .icon-inbox-task-outline{
+          &:before{
+            font-size: 25px;
+          }
+        }
       }
     }
   }
   .activity {
     display: inline-block;
-    margin-left: 23%;
+    margin-left: 21%;
     p {
       @include fontsize(3.0);
       &.icon {
         height: 30px;
         width: 15px;
+        .icon-notifications-outline{
+          &:before{
+            font-size: 25px;
+          }
+        }
       }
     }
   }
   .account {
     position: absolute;
-    top: 0;
+    top: -3px;
     right: 0;
     .image {
-      img {
-        @include border_radius(15px);
+      .global_list_noimage {
+        @include border_radius(100px);
+        @include fontsize(1.0);
+        line-height: 28px;
+        background: white;
+        border: 1px solid $torio_green;
+        text-align: center;
+        color: $torio_green;
+        font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
         width: 30px;
-        height: auto;
-        vertical-align: bottom;
+        height: 30px;
+        display: block;
+        font-weight: bold; 
       }
     }
   }

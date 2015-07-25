@@ -81,13 +81,14 @@ header {
     font-size: 30px;
     font-size: 3rem;
     position: absolute;
-    left: 14px;
-    top: 50%;
-    margin-top: -14px;
-    color: #999999; }
+    left: 15px;
+    top: 15px;
+    color: #555555; }
     header .global_menu_btn:hover {
       color: #50bcb6;
       cursor: pointer; }
+    header .global_menu_btn .icon-automation-arrow:before {
+      font-size: 25px; }
   header .activity_box {
     width: 400px;
     right: 10px;
@@ -119,7 +120,7 @@ header {
   -ms-border-radius: 2px;
   border-radius: 2px;
   position: absolute;
-  width: 60%;
+  width: 50%;
   height: 32px;
   border: 1px solid #d9d9d9;
   top: 50%;
@@ -151,13 +152,12 @@ header {
 /*Alart*/
 .alart {
   position: absolute;
-  top: 50%;
-  right: 14px;
-  width: 130px;
-  height: 30px;
-  margin-top: -14px; }
+  top: 15px;
+  right: 15px;
+  width: 118px;
+  height: 30px; }
   .alart p {
-    color: #999999;
+    color: #555555;
     -webkit-transition: opacity 0.5s ease-out;
     -moz-transition: opacity 0.5s ease-out;
     -ms-transition: opacity 0.5s ease-out;
@@ -174,27 +174,40 @@ header {
       .alart .task p.icon {
         height: 30px;
         width: 15px; }
+        .alart .task p.icon .icon-inbox-task-outline:before {
+          font-size: 25px; }
   .alart .activity {
     display: inline-block;
-    margin-left: 23%; }
+    margin-left: 21%; }
     .alart .activity p {
       font-size: 30px;
       font-size: 3rem; }
       .alart .activity p.icon {
         height: 30px;
         width: 15px; }
+        .alart .activity p.icon .icon-notifications-outline:before {
+          font-size: 25px; }
   .alart .account {
     position: absolute;
-    top: 0;
+    top: -3px;
     right: 0; }
-    .alart .account .image img {
-      -webkit-border-radius: 15px;
-      -moz-border-radius: 15px;
-      -ms-border-radius: 15px;
-      border-radius: 15px;
+    .alart .account .image .global_list_noimage {
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -ms-border-radius: 100px;
+      border-radius: 100px;
+      font-size: 10px;
+      font-size: 1rem;
+      line-height: 28px;
+      background: white;
+      border: 1px solid #50bcb6;
+      text-align: center;
+      color: #50bcb6;
+      font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
       width: 30px;
-      height: auto;
-      vertical-align: bottom; }
+      height: 30px;
+      display: block;
+      font-weight: bold; }
 
 /*Main*/
 .main {
