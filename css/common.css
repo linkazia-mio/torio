@@ -25,7 +25,6 @@ body {
   font-size: 1.4rem;
   line-height: 1.6;
   color: #333333;
-  /*-webkit-font-smoothing: antialiased;*/
   width: 100%;
   height: 100%;
   margin: 0;
@@ -70,7 +69,7 @@ ul li {
 
 /*Header*/
 header {
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #d9d9d9;
   width: 100%;
   z-index: 1000;
   background: #fff; }
@@ -122,7 +121,7 @@ header {
   position: absolute;
   width: 60%;
   height: 32px;
-  border: 1px solid #e2e2e2;
+  border: 1px solid #d9d9d9;
   top: 50%;
   left: 50%;
   margin: -15px 0 0 -30%; }
@@ -219,7 +218,7 @@ header {
   background: #fff; }
   .global_menu.ui-widget-content {
     border: none;
-    border-right: 1px solid #e2e2e2; }
+    border-right: 1px solid #d9d9d9; }
   .global_menu .global_menu_inner h3 {
     margin: 0 20px 10px 20px; }
     .global_menu .global_menu_inner h3:first-child {
@@ -235,14 +234,14 @@ header {
       clear: both;
       margin-bottom: 0; }
       .global_menu .global_menu_inner ul li a {
-        color: #555555;
+        color: #333333;
         display: block;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
         padding-right: 20px;
-        height: 46px;
-        line-height: 46px; }
+        height: 42px;
+        line-height: 45px; }
         .global_menu .global_menu_inner ul li a span {
           margin: 9px 8px 9px 12px; }
         .global_menu .global_menu_inner ul li a.unread {
@@ -276,8 +275,8 @@ header {
         display: block;
         float: left;
         background: #50bcb6;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         margin-left: 30px; }
       .global_menu .global_menu_inner ul li .global_list_image {
         float: left;
@@ -287,7 +286,7 @@ header {
           -moz-border-radius: 2px;
           -ms-border-radius: 2px;
           border-radius: 2px;
-          width: 30px;
+          width: 25px;
           height: auto; }
   .global_menu .global_menu_inner .groups, .global_menu .global_menu_inner .member {
     position: relative; }
@@ -323,7 +322,7 @@ header {
     border-radius: 100px;
     font-size: 10px;
     font-size: 1rem;
-    line-height: 28px;
+    line-height: 23px;
     background: white;
     border: 1px solid #50bcb6;
     text-align: center;
@@ -336,29 +335,29 @@ header {
       -moz-border-radius: 100px;
       -ms-border-radius: 100px;
       border-radius: 100px;
-      width: 30px;
+      width: 25px;
       height: auto; }
 
 /*Page Menu*/
 .page_menu {
   position: relative;
   /*width: 20%;*/
-  width: 300px;
+  width: 305px;
   height: 100%;
   background: #fff; }
   .page_menu.ui-widget-content {
     border: none;
-    border-right: 1px solid #e2e2e2; }
+    border-right: 1px solid #d9d9d9; }
   .page_menu .config {
     position: relative;
     height: 50px;
     padding: 0 10px;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid #d9d9d9;
     line-height: 50px; }
     .page_menu .config .title {
       font-size: 13px;
       font-size: 1.3rem;
-      color: #555555;
+      color: #333333;
       font-weight: bold;
       float: left; }
       .page_menu .config .title span {
@@ -429,7 +428,7 @@ header {
       font-size: 12px;
       font-size: 1.2rem;
       position: relative;
-      padding: 16px 9px 16px 20px;
+      padding: 16px 10px 16px 20px;
       color: #555555;
       border-bottom: 1px solid #f5f5f5; }
       .page_menu .page_menu_inner .item .check {
@@ -438,14 +437,14 @@ header {
         top: 0;
         width: 0;
         height: 0;
-        border-top: 25px solid #db4c3f;
+        border-top: 20px solid #db4c3f;
         border-right: 8px solid #db4c3f;
         border-bottom: 7px solid #fff;
         border-left: 8px solid #db4c3f; }
       .page_menu .page_menu_inner .item .title {
-        font-size: 14px;
-        font-size: 1.4rem;
-        color: #555555;
+        font-size: 15px;
+        font-size: 1.5rem;
+        color: #333333;
         font-weight: bold;
         margin-bottom: 8px;
         overflow: hidden;
@@ -459,7 +458,7 @@ header {
           -ms-border-radius: 3px;
           border-radius: 3px;
           position: absolute;
-          top: 26px;
+          top: 29px;
           left: 9px;
           margin-top: -3px;
           z-index: 1000;
@@ -488,8 +487,8 @@ header {
       .page_menu .page_menu_inner .item.note {
         height: 115px; }
         .page_menu .page_menu_inner .item.note .text {
-          height: 40px;
-          line-height: 1.8;
+          height: 45px;
+          line-height: 1.4;
           overflow: hidden;
           text-overflow: ellipsis; }
           .page_menu .page_menu_inner .item.note .text::after {
@@ -500,14 +499,17 @@ header {
         white-space: nowrap;
         text-overflow: ellipsis; }
         .page_menu .page_menu_inner .item.task ul li {
-          margin-bottom: 2px; }
+          margin-bottom: 2px;
+          width: 100%; }
           .page_menu .page_menu_inner .item.task ul li .name {
             float: left;
             display: block;
-            text-align: left; }
+            text-align: left;
+            width: 30%; }
           .page_menu .page_menu_inner .item.task ul li .value {
             display: block;
-            text-align: right; }
+            text-align: right;
+            width: 70%; }
       .page_menu .page_menu_inner .item.task .graph {
         position: absolute;
         right: 13px;
@@ -541,7 +543,7 @@ header {
     right: 0;
     left: 0;
     height: 50px;
-    border-top: 1px solid #e2e2e2;
+    border-top: 1px solid #d9d9d9;
     background: #fff;
     text-align: center;
     padding-top: 3px; }
