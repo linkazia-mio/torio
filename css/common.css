@@ -85,15 +85,15 @@ header {
   z-index: 1000;
   background: #fff; }
   header .header_inner {
-    height: 52px;
+    height: 55px;
     background: #fff;
     position: relative; }
   header .global_menu_btn {
     font-size: 25px;
     font-size: 2.5rem;
     position: absolute;
+    top: 16px;
     left: 15px;
-    top: 15px;
     color: #999999; }
     header .global_menu_btn:hover {
       color: #50bcb6;
@@ -118,7 +118,7 @@ header {
   .header_line:after {
     content: '';
     position: absolute;
-    border-top: 2px solid #50bcb6;
+    border-top: 2px solid #39bcb5;
     width: 33%;
     right: 0; }
 
@@ -133,14 +133,15 @@ header {
   height: 32px;
   border: 1px solid #cbcbcb;
   top: 50%;
-  left: 50%;
+  left: 55%;
   margin: -15px 0 0 -30%; }
   .search .icon-search {
-    font-size: 28px;
-    font-size: 2.8rem;
+    font-size: 26px;
+    font-size: 2.6rem;
     color: #999999;
     position: absolute;
-    right: 0; }
+    right: 3px;
+    top: 3px; }
   .search input[type="search"] {
     font-size: 14px;
     font-size: 1.4rem;
@@ -161,7 +162,7 @@ header {
 /*Alart*/
 .alart {
   position: absolute;
-  top: 15px;
+  top: 16px;
   right: 15px;
   width: 180px;
   height: 30px; }
@@ -208,9 +209,9 @@ header {
         font-size: 1rem;
         line-height: 28px;
         background: white;
-        border: 1px solid #50bcb6;
+        border: 1px solid #39bcb5;
         text-align: center;
-        color: #50bcb6;
+        color: #39bcb5;
         font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
         width: 30px;
         height: 30px;
@@ -288,9 +289,9 @@ header {
             content: "";
             width: 5px;
             height: 5px;
-            background: #50bcb6; }
+            background: #39bcb5; }
         .global_menu .global_menu_inner ul li a.selected {
-          background: #50bcb6;
+          background: #39bcb5;
           color: #fff;
           font-weight: bold; }
           .global_menu .global_menu_inner ul li a.selected .global_list_noimage {
@@ -302,7 +303,7 @@ header {
         border-radius: 2px;
         display: block;
         float: left;
-        background: #50bcb6;
+        background: #39bcb5;
         width: 25px;
         height: 25px;
         margin-left: 30px; }
@@ -355,9 +356,9 @@ header {
     font-size: 1rem;
     line-height: 23px;
     background: white;
-    border: 1px solid #50bcb6;
+    border: 1px solid #39bcb5;
     text-align: center;
-    color: #50bcb6;
+    color: #39bcb5;
     font-family: 'Helvetica neue',Helvetica,Arial,sans-serif; }
   .global_menu .global_menu_inner .member .global_list_image {
     float: left; }
@@ -452,7 +453,7 @@ header {
             display: block;
             height: 40px; }
             .page_menu .config .option_box ul li a:hover, .page_menu .config .check_box ul li a:hover {
-              background: #50bcb6;
+              background: #39bcb5;
               color: white;
               cursor: pointer; }
     .page_menu .config .check_box {
@@ -502,7 +503,7 @@ header {
           content: "";
           width: 5px;
           height: 5px;
-          background: #50bcb6; }
+          background: #39bcb5; }
       .page_menu .page_menu_inner .item.file ul li {
         -webkit-border-radius: 2px;
         -moz-border-radius: 2px;
@@ -617,7 +618,7 @@ header {
               top: 6px;
               left: 15px; }
             .page_menu .page_menu_footer .add_page ul li a:hover {
-              background: #50bcb6;
+              background: #39bcb5;
               color: white; }
 
 /*detail*/
