@@ -43,9 +43,9 @@ pre {
 ul li {
   list-style: none; }
 
-.clearfix {
+.clearfix, .alart .account {
   *zoom: 1; }
-  .clearfix:after {
+  .clearfix:after, .alart .account:after {
     content: ".";
     display: block;
     clear: both;
@@ -65,11 +65,22 @@ ul li {
   position: absolute;
   z-index: 1000;
   background: #fff;
-  box-shadow: 0px 0px 10px rgba(150, 150, 150, 0.4); }
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  /*-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);*/
+  /*-webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #D8D8D8;
+  border: 1px solid rgba(0, 0, 0, .2);*/
+  line-height: 1.42857143;
+  text-align: left;
+  white-space: normal;
+  opacity: 1;
+  padding: 10px 1px; }
 
 /*Header*/
 header {
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid #cbcbcb;
   width: 100%;
   z-index: 1000;
   background: #fff; }
@@ -78,17 +89,15 @@ header {
     background: #fff;
     position: relative; }
   header .global_menu_btn {
-    font-size: 30px;
-    font-size: 3rem;
+    font-size: 25px;
+    font-size: 2.5rem;
     position: absolute;
     left: 15px;
     top: 15px;
-    color: #555555; }
+    color: #999999; }
     header .global_menu_btn:hover {
       color: #50bcb6;
       cursor: pointer; }
-    header .global_menu_btn .icon-automation-arrow:before {
-      font-size: 25px; }
   header .activity_box {
     width: 400px;
     right: 10px;
@@ -122,7 +131,7 @@ header {
   position: absolute;
   width: 50%;
   height: 32px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #cbcbcb;
   top: 50%;
   left: 50%;
   margin: -15px 0 0 -30%; }
@@ -154,7 +163,7 @@ header {
   position: absolute;
   top: 15px;
   right: 15px;
-  width: 118px;
+  width: 180px;
   height: 30px; }
   .alart p {
     color: #555555;
@@ -168,46 +177,50 @@ header {
       cursor: pointer; }
   .alart .task {
     display: inline-block; }
-    .alart .task p {
-      font-size: 30px;
-      font-size: 3rem; }
-      .alart .task p.icon {
-        height: 30px;
-        width: 15px; }
-        .alart .task p.icon .icon-inbox-task-outline:before {
-          font-size: 23px; }
+    .alart .task p.icon {
+      height: 30px;
+      width: 15px;
+      font-size: 26px;
+      font-size: 2.6rem;
+      color: #999999; }
   .alart .activity {
     display: inline-block;
-    margin-left: 21%; }
-    .alart .activity p {
-      font-size: 30px;
-      font-size: 3rem; }
-      .alart .activity p.icon {
-        height: 30px;
-        width: 15px; }
-        .alart .activity p.icon .icon-notifications-outline:before {
-          font-size: 23px; }
+    margin-left: 14%; }
+    .alart .activity p.icon {
+      height: 30px;
+      width: 15px;
+      font-size: 26px;
+      font-size: 2.6rem;
+      color: #999999; }
   .alart .account {
     position: absolute;
     top: -3px;
     right: 0; }
-    .alart .account .image .global_list_noimage {
-      -webkit-border-radius: 100px;
-      -moz-border-radius: 100px;
-      -ms-border-radius: 100px;
-      border-radius: 100px;
-      font-size: 10px;
-      font-size: 1rem;
-      line-height: 28px;
-      background: white;
-      border: 1px solid #50bcb6;
-      text-align: center;
-      color: #50bcb6;
-      font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
-      width: 30px;
-      height: 30px;
-      display: block;
-      font-weight: bold; }
+    .alart .account .image {
+      display: inline-block;
+      padding-right: 2px; }
+      .alart .account .image .global_list_noimage {
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        border-radius: 100px;
+        font-size: 10px;
+        font-size: 1rem;
+        line-height: 28px;
+        background: white;
+        border: 1px solid #50bcb6;
+        text-align: center;
+        color: #50bcb6;
+        font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
+        width: 30px;
+        height: 30px;
+        display: block;
+        font-weight: bold; }
+    .alart .account .name {
+      font-size: 12px;
+      font-size: 1.2rem;
+      display: inline-block;
+      color: #333333; }
 
 /*Main*/
 .main {
@@ -231,7 +244,7 @@ header {
   background: #fff; }
   .global_menu.ui-widget-content {
     border: none;
-    border-right: 1px solid #d9d9d9; }
+    border-right: 1px solid #cbcbcb; }
   .global_menu .global_menu_inner h3 {
     margin: 0 20px 5px 20px;
     font-size: 13px;
@@ -308,9 +321,10 @@ header {
     .global_menu .global_menu_inner .groups .add, .global_menu .global_menu_inner .member .add {
       position: absolute;
       right: 17px;
-      top: 0; }
-      .global_menu .global_menu_inner .groups .add .icon-add-circle-outline:before, .global_menu .global_menu_inner .member .add .icon-add-circle-outline:before {
-        font-size: 20px; }
+      top: -2px;
+      font-size: 22px;
+      font-size: 2.2rem;
+      color: #999999; }
       .global_menu .global_menu_inner .groups .add button:hover, .global_menu .global_menu_inner .member .add button:hover {
         cursor: pointer; }
       .global_menu .global_menu_inner .groups .add button:focus, .global_menu .global_menu_inner .member .add button:focus {
@@ -364,12 +378,12 @@ header {
   background: #fff; }
   .page_menu.ui-widget-content {
     border: none;
-    border-right: 1px solid #d9d9d9; }
+    border-right: 1px solid #cbcbcb; }
   .page_menu .config {
     position: relative;
     height: 55px;
     padding: 0 13px;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #cbcbcb;
     line-height: 55px; }
     .page_menu .config .title {
       font-size: 13px;
@@ -391,9 +405,9 @@ header {
       left: 83px;
       top: 16px; }
     .page_menu .config .favorite {
-      font-size: 22px;
-      font-size: 2.2rem;
-      color: #555555;
+      font-size: 23px;
+      font-size: 2.3rem;
+      color: #999999;
       position: absolute;
       right: 83px;
       top: 15px;
@@ -401,7 +415,7 @@ header {
       .page_menu .config .favorite:hover {
         color: #feb22e; }
     .page_menu .config .viewers {
-      color: #555555;
+      color: #999999;
       position: absolute;
       right: 43px;
       top: 0; }
@@ -417,7 +431,7 @@ header {
     .page_menu .config .option {
       font-size: 28px;
       font-size: 2.8rem;
-      color: #555555;
+      color: #999999;
       position: absolute;
       right: 7px;
       top: 13px; }
@@ -453,7 +467,7 @@ header {
       position: relative;
       padding: 16px 10px 16px 20px;
       color: #555555;
-      border-bottom: 1px solid #f5f5f5; }
+      border-bottom: 1px solid #eeeeee; }
       .page_menu .page_menu_inner .item .check {
         position: absolute;
         right: 14px;
@@ -566,42 +580,42 @@ header {
     right: 0;
     left: 0;
     height: 55px;
-    border-top: 1px solid #d9d9d9;
+    border-top: 1px solid #cbcbcb;
     background: #fff;
     text-align: center;
     padding-top: 6px; }
     .page_menu .page_menu_footer .add_page {
       width: 250px;
-      height: 140px;
+      /*height: 140px;*/
       left: 105px;
       bottom: 40px;
       padding-top: 10px; }
       .page_menu .page_menu_footer .add_page ul {
         text-align: left; }
         .page_menu .page_menu_footer .add_page ul li {
-          font-size: 12px;
-          font-size: 1.2rem;
-          font-weight: bold;
-          line-height: 40px;
+          font-size: 14px;
+          font-size: 1.4rem;
+          /*font-weight: bold;*/
+          line-height: 38px;
           position: relative; }
           .page_menu .page_menu_footer .add_page ul li.add_page_note a i, .page_menu .page_menu_footer .add_page ul li.add_page_task a i, .page_menu .page_menu_footer .add_page ul li.add_page_file a i {
             color: #feb22e; }
           .page_menu .page_menu_footer .add_page ul li.add_page_note a:hover i, .page_menu .page_menu_footer .add_page ul li.add_page_task a:hover i, .page_menu .page_menu_footer .add_page ul li.add_page_file a:hover i {
             color: white; }
           .page_menu .page_menu_footer .add_page ul li.add_page_task a i {
-            color: #43aea8; }
+            color: #3595e1; }
           .page_menu .page_menu_footer .add_page ul li.add_page_file a i {
             color: #ed6d44; }
           .page_menu .page_menu_footer .add_page ul li a {
             padding: 0 20px 0 45px;
             display: block;
-            height: 40px; }
+            height: 35px; }
             .page_menu .page_menu_footer .add_page ul li a i:before {
-              font-size: 20px;
-              font-size: 2rem;
+              font-size: 26px;
+              font-size: 2.6rem;
               position: absolute;
-              top: 10px;
-              left: 20px; }
+              top: 6px;
+              left: 15px; }
             .page_menu .page_menu_footer .add_page ul li a:hover {
               background: #50bcb6;
               color: white; }
