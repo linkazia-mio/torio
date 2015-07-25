@@ -393,31 +393,34 @@ header {
     .page_menu .config .favorite {
       font-size: 22px;
       font-size: 2.2rem;
-      color: #999999;
+      color: #555555;
       position: absolute;
-      right: 75px;
-      top: 12px; }
+      right: 83px;
+      top: 15px;
+      font-weight: 700; }
       .page_menu .config .favorite:hover {
         color: #feb22e; }
     .page_menu .config .viewers {
-      color: #999999;
+      color: #555555;
       position: absolute;
-      right: 40px;
+      right: 43px;
       top: 0; }
       .page_menu .config .viewers i {
         font-size: 22px;
         font-size: 2.2rem; }
       .page_menu .config .viewers .number {
-        vertical-align: super; }
+        vertical-align: super;
+        font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
+        color: #999999; }
       .page_menu .config .viewers:hover {
         color: #50bcb6; }
     .page_menu .config .option {
       font-size: 28px;
       font-size: 2.8rem;
-      color: #999999;
+      color: #555555;
       position: absolute;
       right: 7px;
-      top: 10px; }
+      top: 13px; }
       .page_menu .config .option:hover {
         color: #50bcb6; }
     .page_menu .config .option_box, .page_menu .config .check_box {
