@@ -17,11 +17,9 @@
 		<script src="js/css-filters-polyfill.js"></script>
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" href="css/sanitize.css">
     <link rel="stylesheet" href="css/icon.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/component.css" />
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/torio.css">
   </head>
   <body>
     <div class="wrapper">
@@ -110,7 +108,7 @@
             <p class="title">All page<span>2</span></p>
             <p class="check"><i class="icon-expand-more"></i></p>
             <p class="favorite"><i class="icon-star-outline"></i></p>
-            <p class="viewers"><i class="icon-person-outline"></i><span class="number">2</span></p>
+            <p class="viewers md-trigger" data-modal="viewers_list"><i class="icon-person-outline"></i><span class="number">2</span></p>
             <p class="option"><i class="icon-more-horiz"></i></p>
             <div class="check_box popover">
               <ul>
@@ -230,6 +228,22 @@
         <!--/Detail-->
       </div>
       <!--/Main-->
+      <!--Viewers/-->
+      <div class="md-modal md-effect-16" id="viewers_list">
+  			<div class="md-content">
+  				<h3>この投稿を見た人</h3>
+  				<div>
+  					<p>This is a modal window. You can do the following things with it:</p>
+  					<ul>
+  						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+  						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+  						<li><strong>Close:</strong> click on the button below to close the modal.</li>
+  					</ul>
+  					<button class="md-close">Close me!</button>
+  				</div>
+  			</div>
+  		</div>
+      <!--/Viewers-->
       <div class="md-modal md-effect-16" id="modal-16">
   			<div class="md-content">
   				<h3>Modal Dialog</h3>
