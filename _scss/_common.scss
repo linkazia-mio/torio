@@ -553,9 +553,12 @@ header {
             overflow: hidden;
             border: 2px solid #fff;
             /*box-shadow: 1px 1px 1px rgba(0,0,0,0.2);*/
-            -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+            /*-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
             -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);*/
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
             margin-right: 5px;
             img {
               width: 60px;
