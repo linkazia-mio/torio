@@ -251,13 +251,13 @@ header {
 .global_menu {
   width: 220px;
   min-width: 100px;
-  overflow: hidden;
   background: #fff;
   &.ui-widget-content {
     border: none;
     border-right: 1px solid $border_gray;
   }
   .global_menu_inner {
+    overflow: hidden;
     h3 {
       margin: 0 20px 5px 20px;
       @include fontsize(1.3);

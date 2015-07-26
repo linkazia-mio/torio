@@ -15,7 +15,7 @@ $(function(){
           var h = $(window).height(); //ウィンドウの高さ
           var h1= $('.page_menu .config').height(); //他要素の高さ
           var h2= $('.page_menu .page_menu_footer').height(); //他要素の高さ
-          $('.page_menu_inner').css('height', h-h1-h2-49); //可変部分の高さを適用
+          $('.page_menu_inner').css('height', h-h1-h2-53); //可変部分の高さを適用
           $('.page_menu_footer').css('top', h-h1-h2); //可変部分の高さを適用
      }
      adjust();
