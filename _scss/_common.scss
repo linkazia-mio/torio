@@ -51,7 +51,15 @@ ul {
 /*---------------------------------------------------------------------------------------
  base
 ---------------------------------------------------------------------------------------*/
-
+.noimage {
+  background: white;
+  border: 1px solid $torio_green;
+  text-align: center;
+  color: $torio_green;
+  font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
+  display: block;
+  font-weight: bold;
+}
 /*popover*/
 .popover {
   @include border_radius();
@@ -209,19 +217,12 @@ header {
     .image {
       display: inline-block;
       padding-right: 2px;
-      .global_list_noimage {
+      .noimage {
         @include border_radius(100px);
         @include fontsize(1.0);
         line-height: 28px;
-        background: white;
-        border: 1px solid $torio_green;
-        text-align: center;
-        color: $torio_green;
-        font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
         width: 30px;
         height: 30px;
-        display: block;
-        font-weight: bold;
       }
     }
     .name{
