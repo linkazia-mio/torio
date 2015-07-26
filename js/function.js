@@ -24,6 +24,18 @@ $(function(){
      })
 });
 
+$(window).on('resize', function(){});
+$(function(){
+     function adjust(){
+          var h = $(window).height(); //ウィンドウの高さ
+          $('.viewers_list').css('height', h/2); //可変部分の高さを適用
+     }
+     adjust();
+     $(window).on('resize', function(){
+          adjust();
+     })
+});
+
 $(document).click(function() {
   $('.option_box,.add_page,.activity_box,.check_box').hide();
 });
@@ -84,6 +96,14 @@ $(function(){
         }
      });
      $(".detail").mCustomScrollbar({
+       autoHideScrollbar: true,
+       scrollInertia: 0,
+       advanced:{
+          autoScrollOnFocus: true,
+          updateOnContentResize: true
+        }
+     });
+     $(".viewers_list").mCustomScrollbar({
        autoHideScrollbar: true,
        scrollInertia: 0,
        advanced:{

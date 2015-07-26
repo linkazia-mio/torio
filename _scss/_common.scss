@@ -1,76 +1,13 @@
 /*---------------------------------------------------------------------------------------
- mixin
----------------------------------------------------------------------------------------*/
-
-/*TORIO Color*/
-$green: #43aea8;
-$link_green: #50bcb6;
-$white_green: #e0f2f2;
-$dark_green: #339999;
-$red: #ed6d44;
-$white_red: #ffebe7;
-$dark_red: #db4c3f;
-$yellow: #feb22e;
-$white_yellow: #f9f0e1;
-$dark_yellow: #ff9933;
-$blue: #3595e1;
-$dark_blue: #337ab7;
-$white_blue: #1fa6ea;
-$border_gray: /*#d9d9d9*/ #cbcbcb;
-$border_white_gray: /*#f5f5f5*/ #eeeeee;
-$dark_gray: #e9e9e9;
-$white_gray: #f5f5f5;
-$icon_white_gray: #aeaeae;
-$icon_dark_gray: #7f7f7f;
-$icon_green: #50bcb6;
-$dark_brack: #333333;
-$brack: #555555;
-$white_brack: #999999;
-
-/*TORIO Service Color*/
-$torio_green: /*#50bcb6*/ #39bcb5;
-$torio_red: #ed6d44;
-$torio_yellow: #feb22e;
-
-$img_path: "../images/";
-@font-face {
-  font-family: torio_icon;
-  src: url(../font/torio_icon.ttf) format("ttf");
-}
-/*角丸*/
-@mixin border_radius($value: 4px) {
-    -webkit-border-radius: $value;
-       -moz-border-radius: $value;
-        -ms-border-radius: $value;
-            border-radius: $value;
-}
-@mixin filter($value: 100%) {
-  -webkit-filter: saturate($value);
-  filter:saturate($value);
-}
-/*Font size*/
-@mixin fontsize($fontsize) {
-     font-size: $fontsize * 10px;
-     font-size: $fontsize+rem;
-}
-/*透明度*/
-@mixin opacity($opacity) {
-     opacity: $opacity;
-     $opacityIE: $opacity * 100;
-     filter: alpha(opacity=$opacityIE);
-}
-/*透明度*/
-@mixin easeout {
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -ms-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
-
-/*---------------------------------------------------------------------------------------
  common
 ---------------------------------------------------------------------------------------*/
-
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 html {
   overflow: hidden !important;
 }
@@ -284,7 +221,7 @@ header {
         width: 30px;
         height: 30px;
         display: block;
-        font-weight: bold; 
+        font-weight: bold;
       }
     }
     .name{
@@ -311,10 +248,9 @@ header {
 
 /*Global Menu*/
 .global_menu {
-  /*width: 14%;*/
   width: 220px;
   min-width: 100px;
-  overflow-y: scroll;
+  overflow: hidden;
   background: #fff;
   &.ui-widget-content {
     border: none;
@@ -533,12 +469,12 @@ header {
     }
     .option_box {
       width: 250px;
-      height: 140px;
+      height: auto;
       left: 190px;
       top: 45px;
+      padding: 10px 0;
       z-index: 1000;
       ul {
-        padding: 10px 0;
         li {
           line-height: 40px;
           a {
@@ -556,7 +492,6 @@ header {
     }
     .check_box {
       @extend .option_box;
-      height: auto;
       left: 50px;
     }
   }

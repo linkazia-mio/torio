@@ -1,0 +1,79 @@
+/*---------------------------------------------------------------------------------------
+ mixin
+---------------------------------------------------------------------------------------*/
+
+/*TORIO Color*/
+$green: #43aea8;
+$link_green: #50bcb6;
+$white_green: #e0f2f2;
+$dark_green: #339999;
+$red: #ed6d44;
+$white_red: #ffebe7;
+$dark_red: #db4c3f;
+$yellow: #feb22e;
+$white_yellow: #f9f0e1;
+$dark_yellow: #ff9933;
+$blue: #3595e1;
+$dark_blue: #337ab7;
+$white_blue: #1fa6ea;
+$border_gray: #cbcbcb;
+$border_white_gray: #eeeeee;
+$dark_gray: #e9e9e9;
+$white_gray: #f5f5f5;
+$icon_white_gray: #aeaeae;
+$icon_dark_gray: #7f7f7f;
+$icon_green: #50bcb6;
+$dark_brack: #333333;
+$brack: #555555;
+$white_brack: #999999;
+
+/*TORIO Service Color*/
+$torio_green: #39bcb5;
+$torio_red: #ed6d44;
+$torio_yellow: #feb22e;
+
+$img_path: "../images/";
+@font-face {
+  font-family: torio_icon;
+  src: url(../font/torio_icon.ttf) format("ttf");
+}
+/*角丸*/
+@mixin border_radius($value: 4px) {
+    -webkit-border-radius: $value;
+       -moz-border-radius: $value;
+        -ms-border-radius: $value;
+            border-radius: $value;
+}
+@mixin filter($value: 100%) {
+  -webkit-filter: saturate($value);
+  filter:saturate($value);
+}
+/*Font size*/
+@mixin fontsize($fontsize) {
+     font-size: $fontsize * 10px;
+     font-size: $fontsize+rem;
+}
+/*透明度*/
+@mixin opacity($opacity) {
+     opacity: $opacity;
+     $opacityIE: $opacity * 100;
+     filter: alpha(opacity=$opacityIE);
+}
+/*透明度*/
+@mixin easeout {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+@mixin clearfix {
+  *zoom:1;
+  &:after{
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility:hidden;
+  }
+}
