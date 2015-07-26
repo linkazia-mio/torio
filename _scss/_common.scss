@@ -87,8 +87,14 @@ header {
   z-index: 1000;
   .header_inner {
     height: 55px;
-    background: #fff;
     position: relative;
+    background: #f6f6f6;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0);
+    background: linear-gradient(to bottom,#fff,#eee);
+    background: -moz-linear-gradient(top,#fff,#eee);
+    background: -webkit-linear-gradient(top,#fff,#eee);
+    background: -o-linear-gradient(top,#fff,#eee);
+    background: -ms-linear-gradient(top,#fff,#eee);
   }
   .global_menu_btn {
     @include fontsize(2.5);
@@ -137,6 +143,7 @@ header {
   width: 50%;
   height: 32px;
   border: 1px solid $border_gray;
+  background: #fff;
   top: 50%;
   left: 55%;
   margin: -15px 0 0 -30%;
@@ -222,6 +229,7 @@ header {
         line-height: 28px;
         width: 30px;
         height: 30px;
+        background: none;
       }
     }
     .name{

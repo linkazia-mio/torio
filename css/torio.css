@@ -1139,8 +1139,14 @@ header {
   z-index: 1000; }
   header .header_inner {
     height: 55px;
-    background: #fff;
-    position: relative; }
+    position: relative;
+    background: #f6f6f6;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0);
+    background: linear-gradient(to bottom, #fff, #eee);
+    background: -moz-linear-gradient(top, #fff, #eee);
+    background: -webkit-linear-gradient(top, #fff, #eee);
+    background: -o-linear-gradient(top, #fff, #eee);
+    background: -ms-linear-gradient(top, #fff, #eee); }
   header .global_menu_btn {
     font-size: 25px;
     font-size: 2.5rem;
@@ -1185,6 +1191,7 @@ header {
   width: 50%;
   height: 32px;
   border: 1px solid #cbcbcb;
+  background: #fff;
   top: 50%;
   left: 55%;
   margin: -15px 0 0 -30%; }
@@ -1262,7 +1269,8 @@ header {
         font-size: 1rem;
         line-height: 28px;
         width: 30px;
-        height: 30px; }
+        height: 30px;
+        background: none; }
     .alart .account .name {
       font-size: 12px;
       font-size: 1.2rem;
