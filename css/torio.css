@@ -1136,8 +1136,7 @@ ul li {
 header {
   border-bottom: 1px solid #cbcbcb;
   width: 100%;
-  z-index: 1000;
-  background: #fff; }
+  z-index: 1000; }
   header .header_inner {
     height: 55px;
     background: #fff;
