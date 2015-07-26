@@ -3,14 +3,7 @@ $(function(){
      function adjust(){
           var h = $(window).height(); //ウィンドウの高さ
           $('.main').css('height', h); //可変部分の高さを適用
-     }
-     adjust();
-     $(window).on('resize', function(){
-          adjust();
-     })
-});
-$(window).on('resize', function(){});
-$(function(){
+     };
      function adjust(){
           var h = $(window).height(); //ウィンドウの高さ
           var h1= $('.page_menu .config').height(); //他要素の高さ
@@ -24,7 +17,17 @@ $(function(){
      })
 });
 
-$(window).on('resize', function(){});
+$(function(){
+      function adjust(){
+           var h = $(window).height(); //ウィンドウの高さ
+           $('.global_menu_inner').css('height', h-54); //可変部分の高さを適用
+      }
+     adjust();
+     $(window).on('resize', function(){
+          adjust();
+     })
+});
+
 $(function(){
      function adjust(){
           var h = $(window).height(); //ウィンドウの高さ
@@ -75,7 +78,6 @@ $(document).ready(function(){
     $('.option_box,.activity_box').hide();
   });
 });
-
 
 $(function(){
   $(window).load(function(){
@@ -188,5 +190,4 @@ window.onload=function(){
   getContext("2d")).Doughnut(Dougnut_data_red,options);
   var myDoughnut = new Chart(document.getElementById("task_graph_yellow").
   getContext("2d")).Doughnut(Dougnut_data_yellow,options);
-  var html = graph.generateLegend();
 }
