@@ -5,19 +5,15 @@
     <title>TORIO</title>
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.mCustomScrollbar.js"></script>
     <script type="text/javascript" src="js/chart.js"></script>
     <script type="text/javascript" src="js/function.js"></script>
-
-    <script>
-			// this is important for IEs
-			var polyfilter_scriptpath = '/js/';
-		</script>
-		<script src="js/cssParser.js"></script>
-		<script src="js/css-filters-polyfill.js"></script>
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/torio.css">
   </head>
   <body>
@@ -64,7 +60,7 @@
       </header>
       <!--/Header-->
       <!--Main/-->
-      <div class="main container">
+      <div class="main">
         <!--Global_menu/-->
         <div class="global_menu ui-widget-content">
           <div class="global_menu_inner">
@@ -76,7 +72,7 @@
             </ul>
             <div class="groups">
               <h3>グループ</h3>
-      			    	<p class="add icon md-trigger" data-modal="add_group"><i class="icon-add-circle-outline"></i></p>
+      			    	<p class="add icon" data-toggle="modal" data-target="#add_group"><i class="icon-add-circle-outline"></i></p>
               <ul>
                 <li><a href=""><span class="global_list_noimage"></span>トヨタホームタウンガイド</a></li>
                 <li><a href="" class="unread"><span class="global_list_image"><img src="http://placehold.it/100x100"></span>ZUTTO</a></li>
@@ -90,7 +86,7 @@
             </div>
             <div class="member">
               <h3>メンバー</h3>
-              <p class="add icon md-trigger" data-modal="add_member"><i class="icon-add-circle-outline"></i></p>
+              <p class="add icon" data-toggle="modal" data-target="#add_member"><i class="icon-add-circle-outline"></i></p>
               <ul>
                 <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松 健太</a></li>
                 <li><a href=""><span class="global_list_image"><img src="http://placehold.it/100x100"></span>大石 未央</a></li>
@@ -106,7 +102,7 @@
             <p class="title">All page<span>2</span></p>
             <p class="check"><i class="icon-expand-more"></i></p>
             <p class="favorite"><i class="icon-star-outline"></i></p>
-            <p class="viewers md-trigger" data-modal="viewers_box"><i class="icon-person-outline"></i><span class="number">2</span></p>
+            <p class="viewers" data-toggle="modal" data-target="#viewers_box"><i class="icon-person-outline"></i><span class="number">2</span></p>
             <p class="option"><i class="icon-more-horiz"></i></p>
             <div class="check_box popover">
               <ul>
@@ -221,90 +217,100 @@
         <!--/Page_menu-->
         <!--Detail/-->
         <div class="detail ui-widget-content">
-          <p>コンテンツ部分</p>
         </div>
         <!--/Detail-->
       </div>
       <!--/Main-->
       <!--Viewers/-->
-      <div class="md-modal md-effect-15" id="viewers_box">
-  			<div class="md-content">
-  				<h3>この投稿を見た人</h3>
-  				<div class="viewers_list">
-  					<dl>
-              <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-            <dl>
-              <dt><span class="noimage">KO</span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-            <dl>
-              <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-            <dl>
-              <dt><span class="noimage">KO</span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-            <dl>
-              <dt><span class="noimage">KO</span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-            <dl>
-              <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-            <dl>
-              <dt><span class="noimage">KO</span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-            <dl>
-              <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-            <dl>
-              <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
-  						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
-  					</dl>
-  				</div>
-  			</div>
-  		</div>
-      <script src="js/modalEffects.js"></script>
+      <div class="modal fade" id="viewers_box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">この投稿を見た人</h4>
+            </div>
+            <div class="modal-body">
+              <div class="viewers_list">
+      					<dl>
+                  <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+                <dl>
+                  <dt><span class="noimage">KO</span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+                <dl>
+                  <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+                <dl>
+                  <dt><span class="noimage">KO</span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+                <dl>
+                  <dt><span class="noimage">KO</span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+                <dl>
+                  <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+                <dl>
+                  <dt><span class="noimage">KO</span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+                <dl>
+                  <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+                <dl>
+                  <dt><span class="global_list_image"><img src="http://placehold.it/100x100"></span></dt>
+      						<dd><p class="name">小松健太<a href="">友達になる</a></p></dd>
+      					</dl>
+      				</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--/Viewers-->
-      <!--Add group/--
-      <div class="md-modal md-effect-16" id="add_group">
-  			<div class="md-content">
-  				<h3>グループを新規作成</h3>
-  				<div>
-  					<p>This is a modal window. You can do the following things with it:</p>
-  					<ul>
-  						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-  						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-  						<li><strong>Close:</strong> click on the button below to close the modal.</li>
-  					</ul>
-  				</div>
-  			</div>
-  		</div>
+      <!--Add group/-->
+      <div class="modal fade" id="add_group" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">グループを新規作成</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--/Add group-->
-      <!--Add member/--
-      <div class="md-modal md-effect-16" id="add_member">
-  			<div class="md-content">
-  				<h3>グループを新規作成</h3>
-  				<div>
-  					<p>This is a modal window. You can do the following things with it:</p>
-  					<ul>
-  						<li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-  						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-  						<li><strong>Close:</strong> click on the button below to close the modal.</li>
-  					</ul>
-  				</div>
-  			</div>
-  		</div>
+      <!--Add member/-->
+      <div class="modal fade" id="add_member" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">メンバーを新規作成</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--/Add member-->
-      <div class="md-overlay"></div><!-- the overlay element -->
-      <script src="js/classie.js"></script>
-      <script src="js/modalEffects.js"></script>
     </div>
   </body>
 

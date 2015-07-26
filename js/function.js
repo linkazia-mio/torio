@@ -20,7 +20,7 @@ $(function(){
 $(function(){
       function adjust(){
            var h = $(window).height(); //ウィンドウの高さ
-           $('.global_menu_inner').css('height', h-54); //可変部分の高さを適用
+           $('.global_menu_inner').css('height', h); //可変部分の高さを適用
       }
      adjust();
      $(window).on('resize', function(){
@@ -76,6 +76,12 @@ $(document).ready(function(){
     $(".add_page").toggle( 'fade', '', 100 );
     event.stopPropagation();
     $('.option_box,.activity_box').hide();
+  });
+});
+
+$(function(){
+  $('#add_member,#add_group,#viewers_box').on('shown.bs.modal', function () {
+    $('#myInput').focus()
   });
 });
 

@@ -1085,6 +1085,9 @@ pre {
   height: 100%;
   overflow: hidden; }
 
+a:hover {
+  text-decoration: none; }
+
 ul li {
   list-style: none; }
 
@@ -1120,17 +1123,13 @@ ul li {
   z-index: 1000;
   background: #fff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  /*-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);*/
-  /*-webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  border: 1px solid #D8D8D8;
-  border: 1px solid rgba(0, 0, 0, .2);*/
   line-height: 1.42857143;
   text-align: left;
   white-space: normal;
   opacity: 1;
   padding: 10px 1px; }
+  .popover ul {
+    margin-bottom: 0; }
 
 /*Header*/
 header {
@@ -1446,7 +1445,8 @@ header {
       color: #333333;
       font-weight: bold;
       float: left;
-      font-family: 'Helvetica neue',Helvetica,Arial,sans-serif; }
+      font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
+      margin-bottom: 0; }
       .page_menu .config .title span {
         font-weight: normal;
         padding-left: 10px;
@@ -1513,7 +1513,7 @@ header {
       left: 50px; }
   .page_menu .page_menu_inner {
     overflow: hidden;
-    height: 100%; }
+    width: 100%; }
     .page_menu .page_menu_inner .item {
       font-size: 12px;
       font-size: 1.2rem;
@@ -1780,6 +1780,30 @@ perspective effects (not including the modals and the overlay).
   font-size: 0.8em; }
 
 /* Individual modal styles with animations/transitions */
+/* Effect 16:  Blur */
+.md-show.md-effect-15 ~ .md-overlay {
+  background: rgba(255, 255, 255, 0.8); }
+
+.md-effect-15 .md-content {
+  -webkit-transform: translateY(-5%);
+  -moz-transform: translateY(-5%);
+  -ms-transform: translateY(-5%);
+  transform: translateY(-5%);
+  opacity: 0; }
+
+.md-show.md-effect-15 ~ .container,
+.md-effect-15 .md-content {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.md-show.md-effect-15 .md-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1; }
+
 /* Effect 16:  Blur */
 .md-show.md-effect-16 ~ .md-overlay {
   background: rgba(255, 255, 255, 0.8); }

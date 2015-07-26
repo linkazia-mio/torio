@@ -103,6 +103,34 @@ perspective effects (not including the modals and the overlay).
 /* Individual modal styles with animations/transitions */
 
 /* Effect 16:  Blur */
+.md-show.md-effect-15 ~ .md-overlay {
+	background: rgba(255,255,255,0.8);
+}
+
+.md-effect-15 .md-content {
+	-webkit-transform: translateY(-5%);
+	-moz-transform: translateY(-5%);
+	-ms-transform: translateY(-5%);
+	transform: translateY(-5%);
+	opacity: 0;
+}
+
+.md-show.md-effect-15 ~ .container,
+.md-effect-15 .md-content {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show.md-effect-15 .md-content {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+
+/* Effect 16:  Blur */
 .md-show.md-effect-16 ~ .md-overlay {
 	background: rgba(255,255,255,0.8);
 }
