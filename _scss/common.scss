@@ -284,7 +284,7 @@ header {
         width: 30px;
         height: 30px;
         display: block;
-        font-weight: bold; 
+        font-weight: bold;
       }
     }
     .name{
@@ -311,10 +311,9 @@ header {
 
 /*Global Menu*/
 .global_menu {
-  /*width: 14%;*/
   width: 220px;
   min-width: 100px;
-  overflow-y: scroll;
+  overflow: hidden;
   background: #fff;
   &.ui-widget-content {
     border: none;
@@ -533,12 +532,12 @@ header {
     }
     .option_box {
       width: 250px;
-      height: 140px;
+      height: auto;
       left: 190px;
       top: 45px;
+      padding: 10px 0;
       z-index: 1000;
       ul {
-        padding: 10px 0;
         li {
           line-height: 40px;
           a {
@@ -556,7 +555,6 @@ header {
     }
     .check_box {
       @extend .option_box;
-      height: auto;
       left: 50px;
     }
   }

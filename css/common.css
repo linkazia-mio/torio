@@ -238,10 +238,9 @@ header {
 
 /*Global Menu*/
 .global_menu {
-  /*width: 14%;*/
   width: 220px;
   min-width: 100px;
-  overflow-y: scroll;
+  overflow: hidden;
   background: #fff; }
   .global_menu.ui-widget-content {
     border: none;
@@ -440,24 +439,22 @@ header {
         color: #50bcb6; }
     .page_menu .config .option_box, .page_menu .config .check_box {
       width: 250px;
-      height: 140px;
+      height: auto;
       left: 190px;
       top: 45px;
+      padding: 10px 0;
       z-index: 1000; }
-      .page_menu .config .option_box ul, .page_menu .config .check_box ul {
-        padding: 10px 0; }
-        .page_menu .config .option_box ul li, .page_menu .config .check_box ul li {
-          line-height: 40px; }
-          .page_menu .config .option_box ul li a, .page_menu .config .check_box ul li a {
-            padding: 0 20px;
-            display: block;
-            height: 40px; }
-            .page_menu .config .option_box ul li a:hover, .page_menu .config .check_box ul li a:hover {
-              background: #39bcb5;
-              color: white;
-              cursor: pointer; }
+      .page_menu .config .option_box ul li, .page_menu .config .check_box ul li {
+        line-height: 40px; }
+        .page_menu .config .option_box ul li a, .page_menu .config .check_box ul li a {
+          padding: 0 20px;
+          display: block;
+          height: 40px; }
+          .page_menu .config .option_box ul li a:hover, .page_menu .config .check_box ul li a:hover {
+            background: #39bcb5;
+            color: white;
+            cursor: pointer; }
     .page_menu .config .check_box {
-      height: auto;
       left: 50px; }
   .page_menu .page_menu_inner {
     overflow: hidden;
