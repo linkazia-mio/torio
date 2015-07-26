@@ -1053,6 +1053,13 @@ textarea {
 /*---------------------------------------------------------------------------------------
  common
 ---------------------------------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html {
   overflow: hidden !important; }
 
@@ -1722,7 +1729,7 @@ perspective effects (not including the modals and the overlay).
 
 /* Content styles */
 .md-content {
-  color: #fff;
+  color: #555555;
   background: #fff;
   position: relative;
   border-radius: 3px;
@@ -1730,14 +1737,15 @@ perspective effects (not including the modals and the overlay).
   border: 1px solid #e2e2e2;
   box-shadow: 0px 0px 20px rgba(153, 150, 150, 0.72); }
   .md-content h3 {
-    margin: 0;
-    text-align: center;
+    font-size: 14px;
     font-size: 1.4rem;
+    padding: 20px;
     font-weight: bold;
-    color: #555; }
+    color: #555555;
+    border-bottom: 1px solid #cbcbcb; }
 
 .md-content > div {
-  padding: 15px 40px 30px;
+  padding: 20px;
   margin: 0;
   font-weight: 300;
   font-size: 1.15em; }
@@ -1787,3 +1795,46 @@ perspective effects (not including the modals and the overlay).
   -ms-transform: translateY(0);
   transform: translateY(0);
   opacity: 1; }
+
+#viewers_box div {
+  *zoom: 1; }
+  #viewers_box div:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden; }
+  #viewers_box div .viewers_list {
+    overflow: hidden; }
+    #viewers_box div .viewers_list dl {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      border-radius: 6px;
+      display: table;
+      table-layout: fixed;
+      float: left;
+      padding: 14px;
+      border: 1px solid #fff;
+      width: 260px; }
+      #viewers_box div .viewers_list dl:hover {
+        background: #f5f5f5;
+        border: 1px solid #cbcbcb; }
+      #viewers_box div .viewers_list dl dt {
+        display: table-cell;
+        vertical-align: middle;
+        width: 60px; }
+        #viewers_box div .viewers_list dl dt img {
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          border-radius: 20px;
+          width: 40px;
+          height: auto; }
+      #viewers_box div .viewers_list dl dd {
+        font-size: 13px;
+        font-size: 1.3rem; }
+        #viewers_box div .viewers_list dl dd .name {
+          display: table-cell; }
+        #viewers_box div .viewers_list dl dd a {
+          color: #50bcb6; }
