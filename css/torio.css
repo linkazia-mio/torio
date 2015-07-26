@@ -1131,6 +1131,12 @@ ul li {
   .popover ul {
     margin-bottom: 0; }
 
+.modal-backdrop {
+  background: #fff; }
+  .modal-backdrop.in {
+    opacity: 0.8;
+    filter: alpha(opacity=80); }
+
 /*Header*/
 header {
   border-bottom: 1px solid #cbcbcb;

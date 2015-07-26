@@ -82,6 +82,12 @@ ul {
     margin-bottom: 0;
   }
 }
+.modal-backdrop {
+  background: #fff;
+  &.in {
+    @include opacity(0.8);
+  }
+}
 /*Header*/
 header {
   border-bottom: 1px solid $border_gray;
