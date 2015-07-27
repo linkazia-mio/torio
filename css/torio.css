@@ -1831,6 +1831,18 @@ header {
       -moz-border-radius-topright: 4px;
       width: 100%;
       height: auto; }
+    .file .file_list .panel .panel-body.type_file .excel {
+      font-size: 80px;
+      font-size: 8rem;
+      -webkit-border-top-left-radius: 4px;
+      -webkit-border-top-right-radius: 4px;
+      -moz-border-radius-topleft: 4px;
+      -moz-border-radius-topright: 4px;
+      color: #39865a;
+      text-align: center;
+      width: 100%;
+      padding: 20% 0;
+      background: #33c16f; }
     .file .file_list .panel .panel-body .file_name {
       font-size: 12px;
       font-size: 1.2rem;
