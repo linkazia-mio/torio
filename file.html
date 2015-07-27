@@ -11,6 +11,7 @@
     <script type="text/javascript" src="js/chart.js"></script>
     <script type="text/javascript" src="js/function.js"></script>
     <script type="text/javascript" src="js/content.js"></script>
+    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -89,9 +90,9 @@
               <h3>メンバー</h3>
               <p class="add icon" data-toggle="modal" data-target="#add_member"><i class="icon-add-circle-outline"></i></p>
               <ul>
-                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>小松 健太</a></li>
+                <li><a href="" class="unread"><span class="noimage">KO</span>小松 健太</a></li>
                 <li><a href=""><span class="user_image"><img src="http://placehold.it/100x100"></span>大石 未央</a></li>
-                <li><a href="" class="unread"><span class="global_list_noimage">KO</span>原戸 陵至</a></li>
+                <li><a href="" class="unread"><span class="noimage">KO</span>原戸 陵至</a></li>
               </ul>
             </div>
           </div>
@@ -230,16 +231,16 @@
               <p class="option"><i class="icon-more-horiz"></i></p>
             </div>
             <!--/Title-->
-            <div class="row file_list">
+            <div class="row file_list" id="masonry">
            <!--File list/-->
-            <div class="col-lg-3 col-md-4 col-sm-2">
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
              <div class="panel">
-              <div class="panel-body">
-                <img class="file_img" src="http://placehold.it/300x200">
-                <p>15 Innovative Dashboard Concepts</p>
-                <p>いいね！11件・コメント1件</p>
+              <div class="panel-body type_image">
+                <img class="file_img" src="https://s-media-cache-ak0.pinimg.com/736x/f8/15/68/f815689b00e25c4606fa71d27f6cf0d6.jpg">
+                <p class="file_name">15 Innovative Dashboard Concepts</p>
+                <p class="count">いいね！11件・コメント1件</p>
                 <div class="info">
-                  <p class="like"><i class="icon-favorite-outline"></i></p>
+                  <p class="like active"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
                   <p class="comment"><i class="icon-comment-outline"></i></p>
                   <p class="download"><i class="icon-file-download-outline"></i></p>
                   <p class="user_image"><img src="http://placehold.it/100x100"></p>
@@ -249,14 +250,14 @@
             </div>
            <!--/File list-->
            <!--File list/-->
-            <div class="col-lg-3 col-md-4 col-sm-2">
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
              <div class="panel">
-              <div class="panel-body">
-                <img class="file_img" src="http://placehold.it/300x600">
-                <p>15 Innovative Dashboard Concepts</p>
-                <p>いいね！11件・コメント1件</p>
+              <div class="panel-body type_file">
+                <div class="excel"><i class="icon-favorite-outline"></i></div>
+                <p class="file_name">デザインパターンリスト</p>
+                <p class="count">いいね！11件・コメント1件</p>
                 <div class="info">
-                  <p class="like"><i class="icon-favorite-outline"></i></p>
+                  <p class="like"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
                   <p class="comment"><i class="icon-comment-outline"></i></p>
                   <p class="download"><i class="icon-file-download-outline"></i></p>
                   <p class="user_image"><img src="http://placehold.it/100x100"></p>
@@ -266,14 +267,14 @@
             </div>
            <!--/File list-->
            <!--File list/-->
-            <div class="col-lg-3 col-md-4 col-sm-2">
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
              <div class="panel">
-              <div class="panel-body">
-                <img class="file_img" src="http://placehold.it/300x200">
-                <p>15 Innovative Dashboard Concepts</p>
-                <p>いいね！11件・コメント1件</p>
+              <div class="panel-body type_image">
+                <img class="file_img" src="https://s-media-cache-ak0.pinimg.com/736x/5c/d1/c1/5cd1c1366764626f563678c440928afe.jpg">
+                <p class="file_name">15 Innovative Dashboard Concepts</p>
+                <p class="count">いいね！11件・コメント1件</p>
                 <div class="info">
-                  <p class="like"><i class="icon-favorite-outline"></i></p>
+                  <p class="like"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
                   <p class="comment"><i class="icon-comment-outline"></i></p>
                   <p class="download"><i class="icon-file-download-outline"></i></p>
                   <p class="user_image"><img src="http://placehold.it/100x100"></p>
@@ -283,14 +284,14 @@
             </div>
            <!--/File list-->
            <!--File list/-->
-            <div class="col-lg-3 col-md-4 col-sm-2">
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
              <div class="panel">
-              <div class="panel-body">
-                <img class="file_img" src="http://placehold.it/500x500">
-                <p>15 Innovative Dashboard Concepts</p>
-                <p>いいね！11件・コメント1件</p>
+              <div class="panel-body type_image">
+                <img class="file_img" src="https://s-media-cache-ak0.pinimg.com/736x/fc/a2/15/fca215b2fdecc31635e22f90bdd0d1dc.jpg">
+                <p class="file_name">15 Innovative Dashboard Concepts</p>
+                <p class="count">いいね！11件・コメント1件</p>
                 <div class="info">
-                  <p class="like"><i class="icon-favorite-outline"></i></p>
+                  <p class="like"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
                   <p class="comment"><i class="icon-comment-outline"></i></p>
                   <p class="download"><i class="icon-file-download-outline"></i></p>
                   <p class="user_image"><img src="http://placehold.it/100x100"></p>
@@ -300,14 +301,14 @@
             </div>
            <!--/File list-->
            <!--File list/-->
-            <div class="col-lg-3 col-md-4 col-sm-2">
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
              <div class="panel">
-              <div class="panel-body">
-                <img class="file_img" src="http://placehold.it/300x100">
-                <p>15 Innovative Dashboard Concepts</p>
-                <p>いいね！11件・コメント1件</p>
+               <div class="panel-body type_image">
+                <img class="file_img" src="https://s-media-cache-ak0.pinimg.com/736x/df/ff/2d/dfff2d77a046a7279661e57a27648173.jpg">
+                <p class="file_name">15 Innovative Dashboard Concepts</p>
+                <p class="count">いいね！11件・コメント1件</p>
                 <div class="info">
-                  <p class="like"><i class="icon-favorite-outline"></i></p>
+                  <p class="like"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
                   <p class="comment"><i class="icon-comment-outline"></i></p>
                   <p class="download"><i class="icon-file-download-outline"></i></p>
                   <p class="user_image"><img src="http://placehold.it/100x100"></p>
@@ -317,14 +318,65 @@
             </div>
            <!--/File list-->
            <!--File list/-->
-            <div class="col-lg-3 col-md-4 col-sm-2">
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
              <div class="panel">
-              <div class="panel-body">
-                <img class="file_img" src="http://placehold.it/300x800">
-                <p>15 Innovative Dashboard Concepts</p>
-                <p>いいね！11件・コメント1件</p>
+              <div class="panel-body type_image">
+                <img class="file_img" src="https://s-media-cache-ak0.pinimg.com/736x/ce/1c/12/ce1c12804736a5c6b25b98255c4a0814.jpg">
+                <p class="file_name">15 Innovative Dashboard Concepts</p>
+                <p class="count">いいね！11件・コメント1件</p>
                 <div class="info">
-                  <p class="like"><i class="icon-favorite-outline"></i></p>
+                  <p class="like"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
+                  <p class="comment"><i class="icon-comment-outline"></i></p>
+                  <p class="download"><i class="icon-file-download-outline"></i></p>
+                  <p class="user_image"><img src="http://placehold.it/100x100"></p>
+                </div>
+              </div>
+             </div>
+            </div>
+           <!--/File list-->
+           <!--File list/-->
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
+             <div class="panel">
+              <div class="panel-body type_image">
+                <img class="file_img" src="https://s-media-cache-ak0.pinimg.com/736x/1d/73/a1/1d73a1b1c37abdff6befea9f27c0b535.jpg">
+                <p class="file_name">15 Innovative Dashboard Concepts</p>
+                <p class="count">いいね！11件・コメント1件</p>
+                <div class="info">
+                  <p class="like active"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
+                  <p class="comment"><i class="icon-comment-outline"></i></p>
+                  <p class="download"><i class="icon-file-download-outline"></i></p>
+                  <p class="user_image"><img src="http://placehold.it/100x100"></p>
+                </div>
+              </div>
+             </div>
+            </div>
+           <!--/File list-->
+           <!--File list/-->
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
+             <div class="panel">
+              <div class="panel-body type_image">
+                <img class="file_img" src="https://s-media-cache-ak0.pinimg.com/736x/a6/30/8e/a6308e2bef56bf87e2af1303fa5657bf.jpg">
+                <p class="file_name">15 Innovative Dashboard Concepts</p>
+                <p class="count">いいね！11件・コメント1件</p>
+                <div class="info">
+                  <p class="like"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
+                  <p class="comment"><i class="icon-comment-outline"></i></p>
+                  <p class="download"><i class="icon-file-download-outline"></i></p>
+                  <p class="user_image"><img src="http://placehold.it/100x100"></p>
+                </div>
+              </div>
+             </div>
+            </div>
+           <!--/File list-->
+           <!--File list/-->
+            <div class="col-lg-3 col-md-4 col-sm-2 grid">
+             <div class="panel">
+              <div class="panel-body type_image">
+                <img class="file_img" src="https://s-media-cache-ak0.pinimg.com/736x/bf/47/3c/bf473c6b4295e7b7804b23068ca18cc1.jpg">
+                <p class="file_name">デザインパターンリスト</p>
+                <p class="count">いいね！11件・コメント1件</p>
+                <div class="info">
+                  <p class="like"><i class="icon-favorite-outline"></i><i class="icon-favorite"></i></p>
                   <p class="comment"><i class="icon-comment-outline"></i></p>
                   <p class="download"><i class="icon-file-download-outline"></i></p>
                   <p class="user_image"><img src="http://placehold.it/100x100"></p>

@@ -1413,7 +1413,8 @@ header {
               -moz-transform: rotate(90deg);
               -webkit-transform: rotate(90deg);
               background: #aeaeae; }
-    .global_menu .global_menu_inner .member .global_list_noimage {
+    .global_menu .global_menu_inner .member .noimage {
+      font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
       font-size: 10px;
       font-size: 1rem;
       line-height: 23px;
@@ -1421,7 +1422,9 @@ header {
       border: 1px solid #39bcb5;
       text-align: center;
       color: #39bcb5;
-      font-family: 'Helvetica neue',Helvetica,Arial,sans-serif; }
+      margin-left: 30px;
+      width: 25px;
+      float: left; }
     .global_menu .global_menu_inner .member .user_image {
       float: left;
       margin-left: 30px; }
@@ -1821,19 +1824,45 @@ header {
   border: none; }
   .file .file_list .panel .panel-body {
     padding: 0; }
-    .file .file_list .panel .panel-body .file_img {
+    .file .file_list .panel .panel-body.type_image .file_img {
       -webkit-border-top-left-radius: 4px;
       -webkit-border-top-right-radius: 4px;
       -moz-border-radius-topleft: 4px;
       -moz-border-radius-topright: 4px;
       width: 100%;
       height: auto; }
+    .file .file_list .panel .panel-body .file_name {
+      font-size: 12px;
+      font-size: 1.2rem;
+      padding: 15px 15px 10px 15px;
+      font-weight: bold; }
+    .file .file_list .panel .panel-body .count {
+      font-size: 10px;
+      font-size: 1rem;
+      color: #999999;
+      padding: 0 15px; }
     .file .file_list .panel .panel-body .info {
       position: relative;
       border-top: 1px solid #eeeeee;
       padding: 10px 15px; }
       .file .file_list .panel .panel-body .info p {
-        display: inline-block; }
+        font-size: 23px;
+        font-size: 2.3rem;
+        color: #999999;
+        display: inline-block;
+        margin: 0 2% 0 0; }
+        .file .file_list .panel .panel-body .info p:hover {
+          color: #50bcb6;
+          cursor: pointer; }
+        .file .file_list .panel .panel-body .info p.like .icon-favorite-outline {
+          display: block; }
+        .file .file_list .panel .panel-body .info p.like .icon-favorite {
+          display: none; }
+        .file .file_list .panel .panel-body .info p.like.active .icon-favorite-outline {
+          display: none; }
+        .file .file_list .panel .panel-body .info p.like.active .icon-favorite {
+          color: #db4c3f;
+          display: block; }
       .file .file_list .panel .panel-body .info .user_image {
         position: absolute;
         right: 15px;

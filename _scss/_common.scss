@@ -391,14 +391,17 @@ header {
     }
     .member {
       @extend .groups;
-      .global_list_noimage {
+      .noimage {
+        @include font_eng;
         @include fontsize(1.0);
         line-height: 23px;
         background: white;
         border: 1px solid $torio_green;
         text-align: center;
         color: $torio_green;
-        font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
+        margin-left: 30px;
+        width: 25px;
+        float: left;
       }
       .user_image {
         float: left;

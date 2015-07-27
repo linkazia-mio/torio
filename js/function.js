@@ -130,6 +130,23 @@ $(document).ready(function(){
 });
 
 window.onload=function(){
+
+  //File可変グリッド
+  $(function(){
+      $('#masonry').masonry({
+          itemSelector: '.grid',
+          isFitWidth: true,
+          isAnimated: true
+      });
+  });
+  jQuery(window).resize(function(){
+    $('#masonry').masonry({
+        itemSelector: '.grid',
+        isFitWidth: true,
+        isAnimated: true
+    });
+  });
+
   //画面幅移動
   jQuery(function() {
       jQuery( '.global_menu' ).resizable({
@@ -141,6 +158,7 @@ window.onload=function(){
           maxWidth: 600
       });
       jQuery( '.detail' ).resizable({
+        minWidth: 450
       });
   });
 
