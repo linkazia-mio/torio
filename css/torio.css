@@ -1826,7 +1826,7 @@ header {
   border: none; }
   .file .file_list .panel .panel-body {
     padding: 0; }
-    .file .file_list .panel .panel-body.type_image .file_img {
+    .file .file_list .panel .panel-body.type_image .file_img img {
       -webkit-border-top-left-radius: 4px;
       -webkit-border-top-right-radius: 4px;
       -moz-border-radius-topleft: 4px;
@@ -1834,19 +1834,15 @@ header {
       width: 100%;
       height: auto;
       z-index: 1; }
-    .file .file_list .panel .panel-body.type_image .url {
+    .file .file_list .panel .panel-body.type_image .file_img .url {
       color: #fff;
       display: block;
-      margin-top: -22px;
-      background: -moz-linear-gradient(top, rgba(240, 240, 240, 0.3), rgba(24, 24, 24, 0.9));
-      /* Firefox用 */
-      background: -o-linear-gradient(rgba(240, 240, 240, 0.3), rgba(24, 24, 24, 0.9));
-      /* Opera */
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 240, 0.3)), to(rgba(24, 24, 24, 0.9)));
-      /* Safari,Google Chrome用 */
-      background: linear-gradient(top, rgba(240, 240, 240, 0.3), rgba(24, 24, 24, 0.9));
+      background: -moz-linear-gradient(top, rgba(240, 240, 240, 0), rgba(24, 24, 24, 0.4));
+      background: -o-linear-gradient(rgba(240, 240, 240, 0), rgba(24, 24, 24, 0));
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 240, 0.3)), to(rgba(24, 24, 24, 0.4)));
+      background: linear-gradient(top, rgba(240, 240, 240, 0), rgba(24, 24, 24, 0));
       z-index: 100; }
-      .file .file_list .panel .panel-body.type_image .url i {
+      .file .file_list .panel .panel-body.type_image .file_img .url i {
         font-size: 20px;
         font-size: 2rem; }
     .file .file_list .panel .panel-body.type_file .excel {
