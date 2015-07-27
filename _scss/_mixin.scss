@@ -66,7 +66,7 @@ $img_path: "../images/";
   -ms-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
-
+/*clearfix*/
 @mixin clearfix {
   *zoom:1;
   &:after{
@@ -76,4 +76,7 @@ $img_path: "../images/";
     height: 0;
     visibility:hidden;
   }
+}
+@mixin font_eng {
+  font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
 }

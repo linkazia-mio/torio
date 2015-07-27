@@ -103,7 +103,7 @@ $(function(){
           updateOnContentResize: true
         }
      });
-     $(".detail").mCustomScrollbar({
+     $(".detail .file").mCustomScrollbar({
        autoHideScrollbar: true,
        scrollInertia: 0,
        advanced:{
