@@ -1819,6 +1819,8 @@ header {
 ---------------------------------------------------------------------------------------*/
 .file .file_list.row {
   margin: 0 15px; }
+  .file .file_list.row .col-lg-3 {
+    width: 250px; }
 
 .file .file_list .panel {
   border: none; }
@@ -1830,7 +1832,23 @@ header {
       -moz-border-radius-topleft: 4px;
       -moz-border-radius-topright: 4px;
       width: 100%;
-      height: auto; }
+      height: auto;
+      z-index: 1; }
+    .file .file_list .panel .panel-body.type_image .url {
+      color: #fff;
+      display: block;
+      margin-top: -22px;
+      background: -moz-linear-gradient(top, rgba(240, 240, 240, 0.3), rgba(24, 24, 24, 0.9));
+      /* Firefox用 */
+      background: -o-linear-gradient(rgba(240, 240, 240, 0.3), rgba(24, 24, 24, 0.9));
+      /* Opera */
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 240, 0.3)), to(rgba(24, 24, 24, 0.9)));
+      /* Safari,Google Chrome用 */
+      background: linear-gradient(top, rgba(240, 240, 240, 0.3), rgba(24, 24, 24, 0.9));
+      z-index: 100; }
+      .file .file_list .panel .panel-body.type_image .url i {
+        font-size: 20px;
+        font-size: 2rem; }
     .file .file_list .panel .panel-body.type_file .excel {
       font-size: 80px;
       font-size: 8rem;
